@@ -240,10 +240,12 @@ export default function App() {
             <div className="min-h-screen overflow-x-hidden bg-background text-on-surface font-body-lg">
               <ScrollToTop />
               <CelebrationLayer />
-              {/* A native build with no reachable server address cannot load
-                  anything, so ask for one up front instead of rendering a shell
-                  whose every request fails. */}
-              {NEEDS_API_BASE ? <ConnectServer /> : <AppRoutes />}
+              <ErrorBoundary>
+                {/* A native build with no reachable server address cannot load
+                    anything, so ask for one up front instead of rendering a shell
+                    whose every request fails. */}
+                {NEEDS_API_BASE ? <ConnectServer /> : <AppRoutes />}
+              </ErrorBoundary>
               <PWAUpdateNotifier updateAvailable={updateAvailable} applyUpdate={applyUpdate} />
               <PWAInstallPrompt
                 installPrompt={installPrompt}

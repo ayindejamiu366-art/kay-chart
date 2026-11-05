@@ -8,9 +8,6 @@ const config: CapacitorConfig = {
   // `appName` is the user-visible label shown on the launcher.
   appName: 'Kay Chart',
   webDir: 'dist',
-  server: {
-    androidScheme: 'https',
-  },
   plugins: {
     SplashScreen: {
       launchAutoHide: true,

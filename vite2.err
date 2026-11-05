@@ -1,0 +1,19 @@
+node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: UNKNOWN: unknown error, scandir 'C:\Users\jam kay\nocturne-app\android\capacitor-cordova-android-plugins'
+Emitted 'error' event on FSWatcher instance at:
+    at FSWatcher._handleError (file:///C:/Users/jam%20kay/nocturne-app/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:44481:10)
+    at NodeFsHandler._boundHandleError (file:///C:/Users/jam%20kay/nocturne-app/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:42954:43)
+    at ReaddirpStream.emit (node:events:509:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4094,
+  code: 'UNKNOWN',
+  syscall: 'scandir',
+  path: 'C:\\Users\\jam kay\\nocturne-app\\android\\capacitor-cordova-android-plugins'
+}
+
+Node.js v24.19.0

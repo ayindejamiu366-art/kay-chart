@@ -1,5 +1,17 @@
 let registrationPromise = null;
 
+function isNativeCapacitor() {
+  try {
+    const bridge = typeof window !== 'undefined' ? window.Capacitor : null;
+    if (!bridge) return false;
+    if (typeof bridge.isNativePlatform === 'function') return Boolean(bridge.isNativePlatform());
+    const platform = bridge.getPlatform ? bridge.getPlatform() : bridge.platform;
+    return platform === 'android' || platform === 'ios';
+  } catch {
+    return false;
+  }
+}
+
 export function usePWA() {
   const [updateAvailable, setUpdateAvailable] = useState(false);
   const [installPrompt, setInstallPrompt] = useState(null);
@@ -8,6 +20,7 @@ export function usePWA() {
 
   const registerSW = useCallback(async () => {
     if (!('serviceWorker' in navigator)) return null;
+    if (isNativeCapacitor()) return null;
     if (registrationPromise) return registrationPromise;
 
     registrationPromise = (async () => {

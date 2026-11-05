@@ -28,11 +28,9 @@ root.render(
 // with something the user (or a logcat read) can actually see, instead of the
 // near-black background.
 window.addEventListener('error', event => {
-  if (document.getElementById('root')?.childElementCount) return
   showBootFailure(event?.message || 'Unknown startup error')
 })
 window.addEventListener('unhandledrejection', event => {
-  if (document.getElementById('root')?.childElementCount) return
   showBootFailure(event?.reason?.message || String(event?.reason || 'Unhandled promise rejection'))
 })
 
