@@ -1,0 +1,29 @@
+- generic [ref=f9e8]:
+  - generic [ref=f9e498]:
+    - generic [ref=f9e499]:
+      - generic [ref=f9e500]:
+        - generic [ref=f9e501]: search
+        - textbox "Search songs, artists, albums..." [active] [ref=f9e502]
+      - generic [ref=f9e503]:
+        - button "All" [ref=f9e504] [cursor=pointer]
+        - button "Songs" [ref=f9e505] [cursor=pointer]
+        - button "Artists" [ref=f9e506] [cursor=pointer]
+        - button "Albums" [ref=f9e507] [cursor=pointer]
+    - generic [ref=f9e509]:
+      - generic [ref=f9e510]: search
+      - paragraph [ref=f9e511]: Search for your favorite music
+  - navigation [ref=f9e482]:
+    - button "Home" [ref=f9e483] [cursor=pointer]:
+      - generic [ref=f9e484]: home
+    - button "Search" [ref=f9e485] [cursor=pointer]:
+      - generic [ref=f9e486]: search
+    - button "Charts" [ref=f9e487] [cursor=pointer]:
+      - generic [ref=f9e488]: leaderboard
+    - button "Upload" [ref=f9e489] [cursor=pointer]:
+      - generic [ref=f9e490]: cloud_upload
+    - button "Admin" [ref=f9e491] [cursor=pointer]:
+      - generic [ref=f9e492]: admin_panel_settings
+    - button "Library" [ref=f9e493] [cursor=pointer]:
+      - generic [ref=f9e494]: repeat
+    - button "Profile" [ref=f9e495] [cursor=pointer]:
+      - generic [ref=f9e496]: person

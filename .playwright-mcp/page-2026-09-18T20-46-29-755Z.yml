@@ -1,0 +1,42 @@
+- generic [ref=f5e1]:
+  - generic [ref=f5e3]:
+    - generic [ref=f5e4]:
+      - generic [aria-hidden] [ref=f5e6]:
+        - generic [ref=f5e7]: Loading
+        - progressbar [aria-hidden] [ref=f5e8]
+      - main [ref=f5e15]:
+        - generic [ref=f5e16]:
+          - generic [ref=f5e17]: Sign in with Google
+          - generic [ref=f5e23]:
+            - heading "Sign in" [level=1] [ref=f5e24]
+            - generic [ref=f5e26]:
+              - text: to continue to
+              - button "vsqffytuhovaswsrmink.supabase.co" [ref=f5e27] [cursor=pointer]
+        - generic [ref=f5e35]:
+          - generic [ref=f5e36]:
+            - generic [ref=f5e40]:
+              - textbox "Email or phone" [active] [invalid] [ref=f5e41]
+              - generic [aria-hidden]: Email or phone
+            - generic [ref=f5e81]: Enter an email or phone number
+          - button "Forgot email?" [ref=f5e45] [cursor=pointer]
+        - generic [ref=f5e47]:
+          - button "Next" [ref=f5e51] [cursor=pointer]
+          - button "Create account" [ref=f5e59]
+    - contentinfo [ref=f5e66]:
+      - combobox "Change language English (United States)" [ref=f5e70] [cursor=pointer]:
+        - generic [aria-hidden]:
+          - generic: English (United States)
+      - list [ref=f5e72]:
+        - listitem [ref=f5e73]:
+          - link "Open Google Account Help Center (external, opens in a new window)" [ref=f5e74] [cursor=pointer]:
+            - /url: https://support.google.com/accounts?hl=en-US&p=account_iph
+            - text: Help
+        - listitem [ref=f5e75]:
+          - link "Privacy Policy (external, opens in a new window)" [ref=f5e76] [cursor=pointer]:
+            - /url: https://accounts.google.com/TOS?loc=NG&hl=en-US&privacy=true
+            - text: Privacy
+        - listitem [ref=f5e77]:
+          - link "Google Terms of Service (external, opens in a new window)" [ref=f5e78] [cursor=pointer]:
+            - /url: https://accounts.google.com/TOS?loc=NG&hl=en-US
+            - text: Terms
+  - iframe [ref=f5e86]

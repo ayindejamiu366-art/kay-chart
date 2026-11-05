@@ -1,0 +1,155 @@
+{
+  "$comment": "Shared celebration scenarios. BOTH the server suite (tests/qa-celebrations.cjs, CommonJS) and the client suite (tests/celebrations.test.js, vitest) load this file and assert the same expectations, so the two engines cannot drift on window maths, scoping or priority again. Dates are fixed; nothing here depends on the real current date.",
+  "calendar": {
+    "NG-2026": [
+      { "id": "ng-new-year-2026", "name": "New Year's Day", "date": "2026-01-01", "countryCode": "NG", "subdivisionCodes": [], "nationalHoliday": true, "holidayTypes": ["Public"], "type": "public-holiday", "theme": "new-year", "priority": 60, "source": "NAGER_DATE" },
+      { "id": "ng-christmas-2026-12-25", "name": "Christmas Day", "date": "2026-12-25", "countryCode": "NG", "subdivisionCodes": [], "nationalHoliday": true, "holidayTypes": ["Public"], "type": "public-holiday", "theme": "christmas", "priority": 60, "source": "NAGER_DATE" },
+      { "id": "ng-boxing-2026-12-26", "name": "Boxing Day", "date": "2026-12-26", "countryCode": "NG", "subdivisionCodes": [], "nationalHoliday": true, "holidayTypes": ["Public"], "type": "public-holiday", "theme": "festive", "priority": 60, "source": "NAGER_DATE" },
+      { "id": "ng-national-day-2026-10-01", "name": "National Day", "date": "2026-10-01", "countryCode": "NG", "subdivisionCodes": [], "nationalHoliday": true, "holidayTypes": ["Public"], "type": "public-holiday", "theme": "independence", "priority": 60, "source": "NAGER_DATE" },
+      { "id": "global-christmas", "name": "Christmas Day", "date": "2026-12-25", "countryCode": null, "subdivisionCodes": [], "nationalHoliday": false, "holidayTypes": ["Observance"], "type": "observance", "theme": "christmas", "priority": 20, "source": "VERIFIED_RULE" }
+    ],
+    "US-2026": [
+      { "id": "us-independence-2026-07-04", "name": "Independence Day", "date": "2026-07-04", "countryCode": "US", "subdivisionCodes": [], "nationalHoliday": true, "holidayTypes": ["Public"], "type": "public-holiday", "theme": "independence", "priority": 60, "source": "NAGER_DATE" },
+      { "id": "us-christmas-2026-12-25", "name": "Christmas Day", "date": "2026-12-25", "countryCode": "US", "subdivisionCodes": [], "nationalHoliday": true, "holidayTypes": ["Public"], "type": "public-holiday", "theme": "christmas", "priority": 60, "source": "NAGER_DATE" },
+      { "id": "us-regional-2026-11-26", "name": "Thanksgiving Day", "date": "2026-11-26", "countryCode": "US", "subdivisionCodes": ["US-CA", "US-NY"], "nationalHoliday": false, "holidayTypes": ["Observance"], "type": "observance", "theme": "festive", "priority": 100, "source": "NAGER_DATE" }
+    ]
+  },
+  "scenarios": [
+    {
+      "name": "NG National Day on the day",
+      "calendar": "NG-2026",
+      "countryCode": "NG",
+      "date": "2026-10-01",
+      "expectActive": ["National Day"],
+      "expectPrimary": "National Day",
+      "note": "Independence Day window is 5 days before and 1 day after."
+    },
+    {
+      "name": "NG National Day one day after",
+      "calendar": "NG-2026",
+      "countryCode": "NG",
+      "date": "2026-10-02",
+      "expectActive": ["National Day"],
+      "expectPrimary": "National Day",
+      "note": "Post-holiday window is exactly 1 day."
+    },
+    {
+      "name": "NG National Day two days after is inactive",
+      "calendar": "NG-2026",
+      "countryCode": "NG",
+      "date": "2026-10-03",
+      "expectActive": [],
+      "expectPrimary": null,
+      "note": "The short tail is the whole point: no lingering theme."
+    },
+    {
+      "name": "NG National Day last day of pre-window",
+      "calendar": "NG-2026",
+      "countryCode": "NG",
+      "date": "2026-09-26",
+      "expectActive": ["National Day"],
+      "expectPrimary": "National Day"
+    },
+    {
+      "name": "NG National Day one day before pre-window is inactive",
+      "calendar": "NG-2026",
+      "countryCode": "NG",
+      "date": "2026-09-25",
+      "expectActive": [],
+      "expectPrimary": null
+    },
+    {
+      "name": "Christmas keeps a longer tail as a festival",
+      "calendar": "NG-2026",
+      "countryCode": "NG",
+      "date": "2026-12-27",
+      "expectActive": ["Christmas Day", "Boxing Day"],
+      "expectPrimary": "Boxing Day",
+      "note": "Christmas is a multi-day festival (post window 3, not 1), so it is still active on 27 Dec; Boxing Day is nearer the date and takes the theme."
+    },
+    {
+      "name": "Boxing Day active the day after Christmas",
+      "calendar": "NG-2026",
+      "countryCode": "NG",
+      "date": "2026-12-26",
+      "expectActive": ["Christmas Day", "Boxing Day"],
+      "expectPrimary": "Boxing Day"
+    },
+    {
+      "name": "Both NG holidays quiet by 30 December",
+      "calendar": "NG-2026",
+      "countryCode": "NG",
+      "date": "2026-12-30",
+      "expectActive": [],
+      "expectPrimary": null
+    },
+    {
+      "name": "US Independence Day active on 4 July",
+      "calendar": "US-2026",
+      "countryCode": "US",
+      "date": "2026-07-04",
+      "expectActive": ["Independence Day"],
+      "expectPrimary": "Independence Day"
+    },
+    {
+      "name": "US Independence Day inactive 6 days before",
+      "calendar": "US-2026",
+      "countryCode": "US",
+      "date": "2026-06-28",
+      "expectActive": [],
+      "expectPrimary": null,
+      "note": "The pre-window is 5 days, so 28 Jun (6 days out) is the first inactive day."
+    },
+    {
+      "name": "US regional observance active for a matching subdivision",
+      "calendar": "US-2026",
+      "countryCode": "US",
+      "subdivisionCode": "US-CA",
+      "date": "2026-11-26",
+      "expectActive": ["Thanksgiving Day"],
+      "expectPrimary": "Thanksgiving Day"
+    },
+    {
+      "name": "US regional observance hidden without a subdivision",
+      "calendar": "US-2026",
+      "countryCode": "US",
+      "date": "2026-11-26",
+      "expectActive": [],
+      "expectPrimary": null
+    },
+    {
+      "name": "US regional observance hidden for a different subdivision",
+      "calendar": "US-2026",
+      "countryCode": "US",
+      "subdivisionCode": "US-TX",
+      "date": "2026-11-26",
+      "expectActive": [],
+      "expectPrimary": null
+    },
+    {
+      "name": "Country-specific holidays never leak across countries",
+      "calendar": "NG-2026",
+      "countryCode": "US",
+      "date": "2026-10-01",
+      "expectActive": [],
+      "expectPrimary": null
+    },
+    {
+      "name": "No country sees only global observances",
+      "calendar": "NG-2026",
+      "countryCode": "",
+      "date": "2026-12-25",
+      "expectActive": ["Christmas Day"],
+      "expectPrimary": "Christmas Day",
+      "note": "Christmas is declared globally as a verified rule, so it survives without a country."
+    },
+    {
+      "name": "Mid-March is quiet",
+      "calendar": "NG-2026",
+      "countryCode": "NG",
+      "date": "2026-03-15",
+      "expectActive": [],
+      "expectPrimary": null
+    }
+  ]
+}

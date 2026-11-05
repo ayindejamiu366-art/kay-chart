@@ -1,0 +1,26 @@
+- generic [ref=e12]:
+  - generic [ref=e13]:
+    - generic [ref=e14]: music_note
+    - heading "Welcome back" [level=1] [ref=e16]
+    - paragraph [ref=e17]: Sign in to continue listening
+  - generic [ref=e41]:
+    - generic [ref=e42]: error
+    - paragraph [ref=e43]: Invalid credentials
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e20]: mail
+      - textbox "Email address" [ref=e21]: test@example.com
+    - generic [ref=e22]:
+      - generic [ref=e23]: lock
+      - textbox "Password" [ref=e24]: test123
+    - link "Forgot password?" [ref=e26] [cursor=pointer]:
+      - /url: /forgot-password
+    - button "Sign In arrow_forward" [ref=e27] [cursor=pointer]:
+      - text: Sign In
+      - generic [ref=e44]: arrow_forward
+  - generic [ref=e29]: or continue with
+  - button "Google" [ref=e33] [cursor=pointer]
+  - paragraph [ref=e39]:
+    - text: Don't have an account?
+    - link "Sign up" [ref=e40] [cursor=pointer]:
+      - /url: /sign-up

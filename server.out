@@ -1,0 +1,101 @@
+◇ injected env (32) from .env // tip: ⌘ override existing { override: true }
+◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+[Database] SQLite initialized
+========================================
+  Kay Chart Server
+  URL: http://localhost:3001
+  Health: http://localhost:3001/api/health
+  Frontend: serving from dist/
+========================================
+[Trending] Auto-sync started (interval: 1800s)
+[Providers] Initialized: deezer
+[Providers] Initialized: audius
+[Providers] Initialized: spotify
+[Providers] Initialized: local
+[Providers] Initialized: jamendo
+[Trending] Starting provider sync...
+[Trending] Synced deezer: 50 tracks (1782ms)
+[Trending] Synced audius: 50 tracks (5620ms)
+[Trending] Synced spotify: 0 tracks (2494ms)
+[Trending] Synced local: 0 tracks (2ms)
+[Trending] Synced jamendo: 0 tracks (0ms)
+[Trending] Updated trending scores
+[Trending] Generated chart snapshots
+[Trending] Sync complete
+[Trending] Starting provider sync...
+[Trending] Synced deezer: 50 tracks (915ms)
+[Trending] Synced audius: 50 tracks (2472ms)
+[Trending] Synced spotify: 0 tracks (1492ms)
+[Trending] Synced local: 0 tracks (2ms)
+[Trending] Synced jamendo: 0 tracks (0ms)
+[Trending] Updated trending scores
+[Trending] Generated chart snapshots
+[Trending] Sync complete
+[Trending] Starting provider sync...
+[Trending] Synced spotify: 0 tracks (188ms)
+[Trending] Synced local: 0 tracks (6ms)
+[Trending] Synced jamendo: 0 tracks (0ms)
+[Trending] Updated trending scores
+[Trending] Generated chart snapshots
+[Trending] Sync complete
+[Trending] Starting provider sync...
+[Trending] Synced spotify: 0 tracks (353ms)
+[Trending] Synced local: 0 tracks (2ms)
+[Trending] Synced jamendo: 0 tracks (0ms)
+[Trending] Updated trending scores
+[Trending] Generated chart snapshots
+[Trending] Sync complete
+[Trending] Starting provider sync...
+[Trending] Synced deezer: 50 tracks (1034ms)
+[Trending] Synced audius: 50 tracks (926ms)
+[Trending] Synced spotify: 0 tracks (1118ms)
+[Trending] Synced local: 0 tracks (1ms)
+[Trending] Synced jamendo: 0 tracks (0ms)
+[Trending] Updated trending scores
+[Trending] Generated chart snapshots
+[Trending] Sync complete
+[Trending] Starting provider sync...
+[Trending] Synced deezer: 50 tracks (805ms)
+[Trending] Synced audius: 50 tracks (831ms)
+[Trending] Synced spotify: 0 tracks (1040ms)
+[Trending] Synced local: 0 tracks (5ms)
+[Trending] Synced jamendo: 0 tracks (0ms)
+[Trending] Updated trending scores
+[Trending] Generated chart snapshots
+[Trending] Sync complete
+[Trending] Starting provider sync...
+[Trending] Synced deezer: 50 tracks (1417ms)
+[Trending] Synced audius: 50 tracks (724ms)
+[Trending] Synced spotify: 0 tracks (1043ms)
+[Trending] Synced local: 0 tracks (2ms)
+[Trending] Synced jamendo: 0 tracks (0ms)
+[Trending] Updated trending scores
+[Trending] Generated chart snapshots
+[Trending] Sync complete
+[Trending] Starting provider sync...
+[Trending] Synced deezer: 50 tracks (788ms)
+[Trending] Synced audius: 50 tracks (1007ms)
+[Trending] Synced spotify: 0 tracks (957ms)
+[Trending] Synced local: 0 tracks (1ms)
+[Trending] Synced jamendo: 0 tracks (0ms)
+[Trending] Updated trending scores
+[Trending] Generated chart snapshots
+[Trending] Sync complete
+[Trending] Starting provider sync...
+[Trending] Synced deezer: 50 tracks (738ms)
+[Trending] Synced audius: 50 tracks (764ms)
+[Trending] Synced spotify: 0 tracks (974ms)
+[Trending] Synced local: 0 tracks (1ms)
+[Trending] Synced jamendo: 0 tracks (0ms)
+[Trending] Updated trending scores
+[Trending] Generated chart snapshots
+[Trending] Sync complete
+[Trending] Starting provider sync...
+[Trending] Synced deezer: 50 tracks (11081ms)
+[Trending] Synced audius: 50 tracks (11624ms)
+[Trending] Synced spotify: 0 tracks (2108ms)
+[Trending] Synced local: 0 tracks (2ms)
+[Trending] Synced jamendo: 0 tracks (0ms)
+[Trending] Updated trending scores
+[Trending] Generated chart snapshots
+[Trending] Sync complete

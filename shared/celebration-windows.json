@@ -1,0 +1,21 @@
+{
+  "$comment": "Shared activation windows. Read by BOTH the server service and the client engine so the two cannot drift. Keyed by effect/theme (stable across countries) rather than by holiday id, because ids are generated per country+date (e.g. ng-national-day-2026-10-01).",
+  "$intensity": "Presentation strength per theme, shared so the API can report the same value the client renders. 'subtle' = ambient wash and edge only, no particles; 'restrained' = a light particle field; 'expressive' = a fuller, still-capped field.",
+  "default": {
+    "preDays": 7,
+    "postDays": 1
+  },
+  "byTheme": {
+    "christmas": { "preDays": 7, "postDays": 3, "festival": true, "intensity": "expressive" },
+    "new-year": { "preDays": 5, "postDays": 3, "festival": true, "intensity": "expressive" },
+    "halloween": { "preDays": 3, "postDays": 1, "festival": false, "intensity": "restrained" },
+    "valentines": { "preDays": 3, "postDays": 1, "festival": false, "intensity": "restrained" },
+    "mothers-day": { "preDays": 3, "postDays": 1, "festival": false, "intensity": "subtle" },
+    "fathers-day": { "preDays": 3, "postDays": 1, "festival": false, "intensity": "subtle" },
+    "childrens-day": { "preDays": 2, "postDays": 1, "festival": false, "intensity": "restrained" },
+    "independence": { "preDays": 5, "postDays": 1, "festival": false, "intensity": "expressive" },
+    "eid": { "preDays": 3, "postDays": 2, "festival": true, "intensity": "restrained" },
+    "labour": { "preDays": 3, "postDays": 1, "festival": false, "intensity": "restrained" },
+    "festive": { "preDays": 3, "postDays": 1, "festival": false, "intensity": "restrained" }
+  }
+}

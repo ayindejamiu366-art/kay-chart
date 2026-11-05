@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!--
+        Visible app branding only. `package_name` and `custom_url_scheme` are
+        deliberately left as com.nocturne.music: they are the Android application
+        identity and the Capacitor deep-link scheme. Changing either would
+        break the installed app, its launcher entry and any custom URL routing.
+    -->
+    <string name="app_name">Kay Chart</string>
+    <string name="title_activity_main">Kay Chart</string>
+    <string name="package_name">com.nocturne.music</string>
+    <string name="custom_url_scheme">com.nocturne.music</string>
+</resources>

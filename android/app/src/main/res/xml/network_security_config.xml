@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Production/default policy: https only, no cleartext.
+
+  A developer pointing the app at a Nocturne backend on their own machine over
+  plain http needs cleartext, and Android blocks it from API 28 onward. Rather
+  than weaken every build, that is granted only to debug builds — see
+  src/debug/res/xml/network_security_config.xml, which overrides this file.
+
+  Android matches <domain> by hostname, not by CIDR range, so a developer's LAN
+  address cannot be enumerated here in advance.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+</network-security-config>

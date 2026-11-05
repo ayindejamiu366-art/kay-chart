@@ -1,0 +1,29 @@
+- generic [ref=f4e12]:
+  - generic [ref=f4e13]:
+    - generic [ref=f4e14]: music_note
+    - heading "Create your account" [level=1] [ref=f4e16]
+    - paragraph [ref=f4e17]: Start your music journey
+  - generic [ref=f4e18]:
+    - generic [ref=f4e19]:
+      - generic [ref=f4e20]: person
+      - textbox "Your name" [ref=f4e21]: Test User
+    - generic [ref=f4e22]:
+      - generic [ref=f4e23]: mail
+      - textbox "Email address" [ref=f4e24]: testuser@nocturne.test
+    - generic [ref=f4e25]:
+      - generic [ref=f4e26]: lock
+      - textbox "Create a password" [ref=f4e27]: Testpass123!
+    - generic [ref=f4e28]:
+      - button "headphones Listener" [ref=f4e29] [cursor=pointer]:
+        - generic [ref=f4e30]: headphones
+        - generic [ref=f4e31]: Listener
+      - button "mic Artist" [ref=f4e32] [cursor=pointer]:
+        - generic [ref=f4e33]: mic
+        - generic [ref=f4e34]: Artist
+    - button [disabled] [ref=f4e49]
+  - generic [ref=f4e37]: or continue with
+  - button "Google" [ref=f4e41] [cursor=pointer]
+  - paragraph [ref=f4e47]:
+    - text: Already have an account?
+    - link "Sign in" [ref=f4e48] [cursor=pointer]:
+      - /url: /sign-in

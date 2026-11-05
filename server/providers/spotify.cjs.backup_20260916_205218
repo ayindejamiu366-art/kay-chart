@@ -1,0 +1,258 @@
+/**
+ * Spotify Provider Adapter
+ * Metadata-only — Spotify API provides search/metadata but NOT streaming.
+ * Previews are 30-second clips when available.
+ */
+
+const CircuitBreaker = require('./circuit-breaker.cjs');
+const TIMEOUT = 8000;
+
+class SpotifyProvider {
+  constructor(config = {}) {
+    this._config = config;
+    this._clientId = config.apiKey || process.env.SPOTIFY_CLIENT_ID || '';
+    this._clientSecret = process.env.SPOTIFY_CLIENT_SECRET || '';
+    this._cachedToken = null;
+    this._tokenExpiry = 0;
+    this._breaker = new CircuitBreaker('spotify');
+  }
+
+  get name() { return 'spotify'; }
+  get capabilities() {
+    return ['search', 'artist_lookup', 'album_lookup', 'track_lookup', 'artwork', 'preview_playback', 'external_playback'];
+  }
+  get supportsFullTracks() { return false; }
+  get supportsPreview() { return true; }
+
+  _isConfigured() {
+    const isPlaceholder = (v) => !v || /REPLACE|CHANGE_ME|your_|placeholder/i.test(v);
+    return !isPlaceholder(this._clientId) && !isPlaceholder(this._clientSecret);
+  }
+
+  async _getAccessToken() {
+    if (this._cachedToken && Date.now() < this._tokenExpiry) return this._cachedToken;
+    if (!this._isConfigured()) return null;
+    const credentials = Buffer.from(`${this._clientId}:${this._clientSecret}`).toString('base64');
+    const res = await fetch('https://accounts.spotify.com/api/token', {
+      method: 'POST',
+      headers: { 'Authorization': `Basic ${credentials}`, 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: 'grant_type=client_credentials',
+      signal: AbortSignal.timeout(TIMEOUT),
+    });
+    if (!res.ok) throw new Error(`Spotify auth ${res.status}`);
+    const data = await res.json();
+    this._cachedToken = data.access_token;
+    this._tokenExpiry = Date.now() + (data.expires_in - 60) * 1000;
+    return this._cachedToken;
+  }
+
+  async _fetch(endpoint, params = {}) {
+    const token = await this._getAccessToken();
+    if (!token) throw new Error('Spotify not configured');
+    const qs = new URLSearchParams(params).toString();
+    const url = `https://api.spotify.com/v1${endpoint}${qs ? '?' + qs : ''}`;
+    const res = await fetch(url, {
+      headers: { 'Authorization': `Bearer ${token}` },
+      signal: AbortSignal.timeout(TIMEOUT),
+    });
+    if (!res.ok) throw new Error(`Spotify ${res.status}`);
+    return res.json();
+  }
+
+  async healthCheck() {
+    if (!this._isConfigured()) return { healthy: false, error: 'Not configured' };
+    try {
+      const start = Date.now();
+      await this._getAccessToken();
+      this._breaker.recordSuccess();
+      return { healthy: true, responseMs: Date.now() - start };
+    } catch (e) {
+      this._breaker.recordFailure();
+      return { healthy: false, error: e.message };
+    }
+  }
+
+  _normalizeTrack(item) {
+    if (!item) return null;
+    return {
+      id: `spotify_${item.id}`,
+      providerTrackId: item.id,
+      title: item.name || 'Untitled',
+      artistName: item.artists?.map(a => a.name).join(', ') || 'Unknown',
+      artistId: item.artists?.[0]?.id ? `spotify_${item.artists[0].id}` : null,
+      albumName: item.album?.name || '',
+      albumId: item.album?.id ? `spotify_${item.album.id}` : null,
+      cover: item.album?.images?.[0]?.url || null,
+      duration: Math.floor((item.duration_ms || 0) / 1000),
+      genre: '',
+      country: '',
+      popularity: item.popularity || 0,
+      playCount: 0,
+      previewUrl: item.preview_url || null,
+      streamUrl: null,
+      externalUrl: item.external_urls?.spotify || null,
+    isPlayable: !!item.preview_url,
+    playbackType: item.preview_url ? 'preview' : 'external',
+    previewOnly: !item.preview_url ? false : true,
+    provider: 'spotify',
+      rank: 0,
+      explicit: item.explicit || false,
+    };
+  }
+
+  _normalizeArtist(item) {
+    if (!item) return null;
+    return {
+      id: `spotify_${item.id}`,
+      providerArtistId: item.id,
+      name: item.name || 'Unknown',
+      photo: item.images?.[0]?.url || null,
+      nbFans: item.followers?.total || 0,
+      nbAlbums: 0,
+      genres: item.genres || [],
+      isVerified: false,
+      provider: 'spotify',
+    };
+  }
+
+  _normalizeAlbum(item) {
+    if (!item) return null;
+    return {
+      id: `spotify_${item.id}`,
+      title: item.name || 'Untitled',
+      artistName: item.artists?.map(a => a.name).join(', ') || '',
+      artistId: item.artists?.[0]?.id ? `spotify_${item.artists[0].id}` : null,
+      cover: item.images?.[0]?.url || null,
+      year: item.release_date?.substring(0, 4) || null,
+      trackCount: item.total_tracks || 0,
+      provider: 'spotify',
+    };
+  }
+
+  async searchTracks(query, limit = 20) {
+    if (!query) return [];
+    if (!this._breaker.canExecute()) return [];
+    try {
+      const data = await this._fetch('/search', { q: query, type: 'track', limit });
+      this._breaker.recordSuccess();
+      return (data.tracks?.items || []).map(i => this._normalizeTrack(i)).filter(Boolean);
+    } catch (e) { this._breaker.recordFailure(); return []; }
+  }
+
+  async getTrack(trackId) {
+    if (!this._breaker.canExecute()) return null;
+    try {
+      const rawId = String(trackId).replace('spotify_', '');
+      const data = await this._fetch(`/tracks/${rawId}`);
+      this._breaker.recordSuccess();
+      return this._normalizeTrack(data);
+    } catch (e) { this._breaker.recordFailure(); return null; }
+  }
+
+  async getTrendingTracks(limit = 20) {
+    if (!this._breaker.canExecute()) return [];
+    try {
+      const data = await this._fetch('/playlists/37i9dQZEVXbMDoHDwVN2tF/tracks', { limit });
+      this._breaker.recordSuccess();
+      return (data.items || []).filter(i => i.track).map(i => this._normalizeTrack(i.track)).filter(Boolean);
+    } catch (e) { this._breaker.recordFailure(); return []; }
+  }
+
+  async getPopularTracks(limit = 20) {
+    return this.getTrendingTracks(limit);
+  }
+
+  async getTracksByGenre(genreId, limit = 20) {
+    if (!this._breaker.canExecute()) return [];
+    try {
+      const data = await this._fetch('/recommendations', { seed_genres: genreId, limit });
+      this._breaker.recordSuccess();
+      return (data.tracks || []).map(i => this._normalizeTrack(i)).filter(Boolean);
+    } catch (e) { this._breaker.recordFailure(); return []; }
+  }
+
+  async getTracksByCountry(countryCode, limit = 20) {
+    return this.getTrendingTracks(limit);
+  }
+
+  async searchArtists(query, limit = 10) {
+    if (!query) return [];
+    if (!this._breaker.canExecute()) return [];
+    try {
+      const data = await this._fetch('/search', { q: query, type: 'artist', limit });
+      this._breaker.recordSuccess();
+      return (data.artists?.items || []).map(i => this._normalizeArtist(i)).filter(Boolean);
+    } catch (e) { this._breaker.recordFailure(); return []; }
+  }
+
+  async getArtist(artistId) {
+    if (!this._breaker.canExecute()) return null;
+    try {
+      const rawId = String(artistId).replace('spotify_', '');
+      const data = await this._fetch(`/artists/${rawId}`);
+      this._breaker.recordSuccess();
+      return this._normalizeArtist(data);
+    } catch (e) { this._breaker.recordFailure(); return null; }
+  }
+
+  async getArtistTopTracks(artistId, limit = 20) {
+    if (!this._breaker.canExecute()) return [];
+    try {
+      const rawId = String(artistId).replace('spotify_', '');
+      const data = await this._fetch(`/artists/${rawId}/top-tracks`, { market: 'US' });
+      this._breaker.recordSuccess();
+      return (data.tracks || []).map(i => this._normalizeTrack(i)).filter(Boolean).slice(0, limit);
+    } catch (e) { this._breaker.recordFailure(); return []; }
+  }
+
+  async getArtistAlbums(artistId, limit = 20) {
+    if (!this._breaker.canExecute()) return [];
+    try {
+      const rawId = String(artistId).replace('spotify_', '');
+      const data = await this._fetch(`/artists/${rawId}/albums`, { limit, market: 'US' });
+      this._breaker.recordSuccess();
+      return (data.items || []).map(i => this._normalizeAlbum(i)).filter(Boolean);
+    } catch (e) { this._breaker.recordFailure(); return []; }
+  }
+
+  async searchAlbums(query, limit = 20) {
+    if (!query) return [];
+    if (!this._breaker.canExecute()) return [];
+    try {
+      const data = await this._fetch('/search', { q: query, type: 'album', limit });
+      this._breaker.recordSuccess();
+      return (data.albums?.items || []).map(i => this._normalizeAlbum(i)).filter(Boolean);
+    } catch (e) { this._breaker.recordFailure(); return []; }
+  }
+
+  async getAlbum(albumId) {
+    if (!this._breaker.canExecute()) return null;
+    try {
+      const rawId = String(albumId).replace('spotify_', '');
+      const data = await this._fetch(`/albums/${rawId}`);
+      this._breaker.recordSuccess();
+      return this._normalizeAlbum(data);
+    } catch (e) { this._breaker.recordFailure(); return null; }
+  }
+
+  async getAlbumTracks(albumId, limit = 50) {
+    if (!this._breaker.canExecute()) return [];
+    try {
+      const rawId = String(albumId).replace('spotify_', '');
+      const data = await this._fetch(`/albums/${rawId}`);
+      this._breaker.recordSuccess();
+      return (data.tracks?.items || []).map(i => this._normalizeTrack(i)).filter(Boolean).slice(0, limit);
+    } catch (e) { this._breaker.recordFailure(); return []; }
+  }
+
+  async getGenres() {
+    if (!this._breaker.canExecute()) return [];
+    try {
+      const data = await this._fetch('/browse/categories', { limit: 50, country: 'US' });
+      this._breaker.recordSuccess();
+      return (data.categories?.items || []).map(c => ({ id: c.id.toLowerCase().replace(/\s+/g, '-'), name: c.name }));
+    } catch (e) { this._breaker.recordFailure(); return []; }
+  }
+}
+
+module.exports = { SpotifyProvider };

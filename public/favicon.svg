@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="kcFavTitle">
+  <title id="kcFavTitle">Kay Chart</title>
+  <defs>
+    <!--
+      userSpaceOnUse, for the same reason as the full mark: the stem's bounding
+      box has zero width, and an objectBoundingBox gradient over a zero-width box
+      is degenerate and paints nothing.
+    -->
+    <linearGradient id="kcFavLime" gradientUnits="userSpaceOnUse" x1="110" y1="404" x2="416" y2="104">
+      <stop offset="0" stop-color="#8FE01A"/>
+      <stop offset="0.5" stop-color="#B6F518"/>
+      <stop offset="1" stop-color="#E4FF5C"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="116" fill="#0A0A0F"/>
+
+  <g fill="url(#kcFavLime)" stroke="url(#kcFavLime)" stroke-width="20" stroke-linejoin="round">
+    <rect x="106" y="112" width="76" height="288" rx="20"/>
+    <path d="M124 226 L166 288 L430 132 L388 70 Z"/>
+    <path d="M166 224 L124 288 L388 442 L430 380 Z"/>
+  </g>
+
+  <path d="M240 202 L316 256 L240 310 Z" fill="#0A0A0F" stroke="#0A0A0F" stroke-width="14" stroke-linejoin="round"/>
+</svg>

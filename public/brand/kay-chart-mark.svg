@@ -1,0 +1,59 @@
+<!--
+  Mark only, with no tile behind it: transparent outside the symbol so it can sit
+  directly on the app's own dark surface (or any coloured chrome) without a
+  visible square edge. The favicon (public/favicon.svg) is the same geometry with
+  the tile filled in, because a browser tab needs its own background.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="kcMarkTitle">
+  <title id="kcMarkTitle">Kay Chart</title>
+  <defs>
+    <!--
+      The gradient is defined in user space rather than the default bounding-box
+      space. The K's stem is a perfectly vertical shape whose bounding box has
+      zero width, and an objectBoundingBox gradient over a zero-width box is
+      degenerate and paints nothing. User-space coordinates keep every part of
+      the mark on one continuous sweep.
+    -->
+    <linearGradient id="kcMarkLime" gradientUnits="userSpaceOnUse" x1="110" y1="404" x2="416" y2="104">
+      <stop offset="0" stop-color="#8FE01A"/>
+      <stop offset="0.5" stop-color="#B6F518"/>
+      <stop offset="1" stop-color="#E4FF5C"/>
+    </linearGradient>
+
+  </defs>
+
+  <!--
+    The K is built from filled shapes rather than strokes: a stem and two arms.
+    Filled geometry renders identically in a browser, in a favicon and in
+    Android's vector format, which a gradient stroke does not.
+
+    `stroke-linejoin="round"` with a stroke the same colour as the fill rounds
+    the outer corners, so the mark keeps its soft, premium edge without needing
+    a bezier on every vertex.
+
+    Proportions are tuned for the favicon: the arms are heavy enough to survive
+    being scaled to 16px, and the play counter is small enough to stay legible
+    as a triangle rather than collapsing into a notch.
+  -->
+  <g fill="url(#kcMarkLime)" stroke="url(#kcMarkLime)" stroke-width="20" stroke-linejoin="round">
+    <!-- Stem -->
+    <rect x="106" y="112" width="76" height="288" rx="20"/>
+    <!-- Upper arm -->
+    <path d="M124 226 L166 288 L430 132 L388 70 Z"/>
+    <!-- Lower arm -->
+    <path d="M166 224 L124 288 L388 442 L430 380 Z"/>
+  </g>
+
+  <!--
+    Play counter. Cut in the tile colour so it reads as negative space inside the
+    K rather than an object floating on top of it: a right-pointing triangle
+    with softened vertices, sitting in the open centre of the arms.
+  -->
+  <path
+    d="M240 202 L316 256 L240 310 Z"
+    fill="#0A0A0F"
+    stroke="#0A0A0F"
+    stroke-width="14"
+    stroke-linejoin="round"
+  />
+</svg>

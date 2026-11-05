@@ -1,0 +1,39 @@
+<!--
+    Kay Chart splash.
+
+    The background colour and the launch behaviour are unchanged from the
+    previous splash, so the Android startup fix (render-first, then native
+    plugins) is not disturbed. Only the artwork changes: the Kay Chart mark,
+    centred with the wordmark-style bar beneath it.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="288dp"
+    android:height="288dp"
+    android:viewportWidth="288"
+    android:viewportHeight="288">
+
+    <path android:fillColor="#0A0A0F" android:pathData="M0,0h288v288H0z" />
+
+    <!--
+        Mark, scaled from the 512-unit source into the middle of the 288 canvas
+        with room around it. Group order draws the K, then cuts the play counter.
+    -->
+    <group
+        android:translateX="76.8"
+        android:translateY="76.8"
+        android:scaleX="0.2625"
+        android:scaleY="0.2625">
+        <path
+            android:fillColor="#D6FF3D"
+            android:pathData="M106,112 h76 a20,20 0 0 1 20,20 v248 a20,20 0 0 1 -20,20 h-76 a20,20 0 0 1 -20,-20 v-248 a20,20 0 0 1 20,-20 z" />
+        <path
+            android:fillColor="#D6FF3D"
+            android:pathData="M124,226 L166,288 L430,132 L388,70 Z" />
+        <path
+            android:fillColor="#D6FF3D"
+            android:pathData="M166,224 L124,288 L388,442 L430,380 Z" />
+        <path
+            android:fillColor="#0A0A0F"
+            android:pathData="M240,202 L316,256 L240,310 Z" />
+    </group>
+</vector>

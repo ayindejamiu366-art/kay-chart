@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon-180.png" />
+      <link rel="mask-icon" href="/favicon.svg" color="#D6FF3D" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="Kay Chart" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="theme-color" content="#0A0A0F" />
+
+      <!-- Web app / install metadata. Brand only; no marketing claims. -->
+      <link rel="manifest" href="/manifest.webmanifest" />
+      <meta name="application-name" content="Kay Chart" />
+      <meta name="description" content="Kay Chart — stream music, build playlists, and discover new artists." />
+
+      <!-- Social sharing metadata. -->
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Kay Chart" />
+      <meta property="og:title" content="Kay Chart" />
+      <meta property="og:description" content="Stream music, build playlists, and discover new artists." />
+      <meta property="og:image" content="/brand/kay-chart-mark.svg" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="Kay Chart" />
+      <meta name="twitter:description" content="Stream music, build playlists, and discover new artists." />
+      <meta name="twitter:image" content="/brand/kay-chart-mark.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <title>Kay Chart</title>
+    <style>
+      html, body, #root {
+        height: 100%;
+        overscroll-behavior: none;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background: #0A0A0F;
+        color: #F1F1F7;
+        font-family: 'Inter', system-ui, sans-serif;
+        touch-action: manipulation;
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+      }
+      /* Prevent pull-to-refresh on mobile */
+      body { overscroll-behavior-y: contain; }
+    </style>
+  </head>
+  <body>
+    <script>
+      try {
+        var t = localStorage.getItem('nocturne_theme');
+        var themeColor = document.querySelector('meta[name="theme-color"]');
+        if (t === 'light') {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
+          if (themeColor) themeColor.content = '#fafafa';
+        } else {
+          document.documentElement.classList.remove('light');
+          document.documentElement.classList.add('dark');
+          if (themeColor) themeColor.content = '#0A0A0F';
+        }
+      } catch(e) {}
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,604 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: 214 255 61;
+  --color-primary-hover: 231 255 130;
+  --color-primary-container: 159 232 31;
+  --color-on-primary: 10 10 15;
+  --color-on-primary-container: 10 10 15;
+  --color-secondary: 168 85 247;
+  --color-on-secondary: 255 255 255;
+  --color-secondary-container: 45 27 61;
+  --color-on-secondary-container: 214 175 253;
+  --color-tertiary: 6 182 212;
+  --color-tertiary-container: 12 53 71;
+  --color-on-tertiary: 255 255 255;
+  --color-on-tertiary-container: 103 232 249;
+  --color-error: 239 68 68;
+  --color-on-error: 255 255 255;
+  --color-error-container: 61 17 17;
+  --color-on-error-container: 252 165 165;
+  --color-background: 8 8 8;
+  --color-on-background: 241 241 247;
+  --color-surface: 8 8 8;
+  --color-surface-dim: 6 6 6;
+  --color-surface-bright: 30 30 30;
+  --color-surface-card: 18 18 18;
+  --color-surface-card-hover: 26 26 26;
+  --color-surface-input: 14 14 14;
+  --color-surface-nav: 12 12 12;
+  --color-surface-container-lowest: 4 4 4;
+  --color-surface-container-low: 14 14 14;
+  --color-surface-container: 18 18 18;
+  --color-surface-container-high: 26 26 26;
+  --color-surface-container-highest: 34 34 34;
+  --color-on-surface: 241 241 247;
+  --color-on-surface-variant: 139 139 158;
+  --color-surface-variant: 30 30 30;
+  --color-border-subtle: 255 255 255 / 0.06;
+  --color-border-medium: 255 255 255 / 0.1;
+  --color-outline: 58 58 58;
+  --color-outline-variant: 42 42 42;
+  --color-inverse-surface: 241 241 247;
+  --color-inverse-on-surface: 10 10 15;
+  --color-inverse-primary: 159 232 31;
+  --ambient-opacity: 1;
+  --shadow-color: 0 0 0;
+}
+
+.light {
+  --color-primary: 132 189 12;
+  --color-primary-hover: 106 153 8;
+  --color-primary-container: 214 255 61;
+  --color-on-primary: 10 10 15;
+  --color-on-primary-container: 10 10 15;
+  --color-secondary: 168 85 247;
+  --color-on-secondary: 255 255 255;
+  --color-secondary-container: 251 207 232;
+  --color-on-secondary-container: 153 27 71;
+  --color-tertiary: 8 145 178;
+  --color-tertiary-container: 165 243 252;
+  --color-on-tertiary: 255 255 255;
+  --color-on-tertiary-container: 15 118 144;
+  --color-error: 220 38 38;
+  --color-on-error: 255 255 255;
+  --color-error-container: 254 226 226;
+  --color-on-error-container: 153 27 27;
+  --color-background: 250 250 250;
+  --color-on-background: 26 26 46;
+  --color-surface: 250 250 250;
+  --color-surface-dim: 240 240 244;
+  --color-surface-bright: 255 255 255;
+  --color-surface-card: 240 240 244;
+  --color-surface-card-hover: 232 232 236;
+  --color-surface-input: 245 245 248;
+  --color-surface-nav: 255 255 255;
+  --color-surface-container-lowest: 255 255 255;
+  --color-surface-container-low: 250 250 250;
+  --color-surface-container: 245 245 248;
+  --color-surface-container-high: 235 235 240;
+  --color-surface-container-highest: 225 225 232;
+  --color-on-surface: 26 26 46;
+  --color-on-surface-variant: 85 85 102;
+  --color-surface-variant: 230 230 238;
+  --color-border-subtle: 0 0 0 / 0.08;
+  --color-border-medium: 0 0 0 / 0.15;
+  --color-outline: 200 200 212;
+  --color-outline-variant: 220 220 230;
+  --color-inverse-surface: 23 23 30;
+  --color-inverse-on-surface: 241 241 247;
+  --color-inverse-primary: 214 255 61;
+  --ambient-opacity: 0.03;
+  --shadow-color: 0 0 0;
+}
+
+@layer base {
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-on-background));
+    min-height: 100dvh;
+    overscroll-behavior: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  ::selection { background-color: rgb(var(--color-primary)); color: #FFFFFF; }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgb(var(--color-surface-card) / 0.75);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgb(var(--color-border-subtle));
+  }
+  .glass-edge { border: 1px solid rgb(var(--color-border-subtle)); }
+  .btn-primary {
+    background: linear-gradient(135deg, rgb(var(--color-primary)) 0%, rgb(var(--color-primary-container)) 100%);
+    box-shadow: 0 4px 20px rgb(var(--color-primary) / 0.35);
+    color: #FFFFFF;
+    transition: all 0.2s ease;
+  }
+  .btn-primary:hover {
+    box-shadow: 0 4px 28px rgb(var(--color-primary) / 0.5);
+    filter: brightness(1.1);
+  }
+  .btn-primary:active { transform: scale(0.97); }
+  .btn-accent {
+    background: linear-gradient(135deg, rgb(var(--color-secondary)) 0%, rgb(var(--color-primary)) 100%);
+    box-shadow: 0 4px 20px rgb(var(--color-secondary) / 0.3);
+    color: #FFFFFF;
+    transition: all 0.2s ease;
+  }
+  .btn-accent:hover { filter: brightness(1.1); }
+  .btn-accent:active { transform: scale(0.97); }
+  .text-gradient {
+    background: linear-gradient(135deg, rgb(var(--color-primary)), rgb(var(--color-secondary)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, rgb(var(--color-tertiary)), rgb(var(--color-primary)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .input-glass {
+    background-color: rgb(var(--color-surface-input));
+    border: 1px solid rgb(var(--color-border-medium));
+    transition: all 0.3s ease;
+  }
+  .input-glass:focus-within {
+    border-color: rgb(var(--color-primary) / 0.5);
+    background-color: rgb(var(--color-primary) / 0.06);
+    box-shadow: 0 0 15px rgb(var(--color-primary) / 0.12);
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .glow-active { box-shadow: 0 0 20px rgb(var(--color-primary) / 0.3); }
+  .glow-purple { box-shadow: 0 0 24px rgb(var(--color-primary) / 0.3); }
+  .glow-pink { box-shadow: 0 0 24px rgb(var(--color-secondary) / 0.3); }
+  .glow-cyan { box-shadow: 0 0 24px rgb(var(--color-tertiary) / 0.3); }
+  .page-enter { animation: page-fade-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .animate-slide-up { animation: mini-player-slide-up 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+  .stagger-1 { animation-delay: 0.05s; }
+  .stagger-2 { animation-delay: 0.1s; }
+  .stagger-3 { animation-delay: 0.15s; }
+  .stagger-4 { animation-delay: 0.2s; }
+  .stagger-5 { animation-delay: 0.25s; }
+  .stagger-6 { animation-delay: 0.3s; }
+  .stagger-7 { animation-delay: 0.35s; }
+  .stagger-8 { animation-delay: 0.4s; }
+}
+
+@layer components {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  }
+  .icon-fill {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+}
+
+@keyframes page-fade-in {
+  0% { opacity: 0; transform: translateY(14px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes mini-player-slide-up {
+  0% { opacity: 0; transform: translateY(24px) scale(0.96); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Range input */
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 14px; width: 14px;
+  border-radius: 50%;
+  background: rgb(var(--color-primary));
+  cursor: pointer;
+  margin-top: -5px;
+  box-shadow: 0 0 10px rgb(var(--color-primary) / 0.5);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+input[type=range]:hover::-webkit-slider-thumb { opacity: 1; }
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%; height: 3px;
+  cursor: pointer;
+  background: rgb(var(--color-on-surface-variant) / 0.2);
+  border-radius: 2px;
+}
+
+/* Ambient gradient glow */
+.ambient-glow {
+  position: fixed;
+  /* Sized to its containing block, not 140% with a -20% offset: ancestors
+     carrying a transform become the containing block for fixed elements, so
+     the oversized/offset variant overflowed and produced horizontal scroll. */
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: var(--ambient-opacity);
+  transition: opacity 0.5s ease;
+  background:
+    radial-gradient(ellipse at 20% 20%, rgb(var(--color-primary) / 0.14) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 30%, rgb(var(--color-secondary) / 0.09) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgb(var(--color-tertiary) / 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 30% 60%, rgba(99, 102, 241, 0.05) 0%, transparent 40%);
+}
+
+@keyframes ambient-shift {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+.ambient-glow-animated { animation: ambient-shift 8s ease-in-out infinite; }
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgb(var(--color-primary) / 0.3); }
+  50% { box-shadow: 0 0 32px rgb(var(--color-primary) / 0.5), 0 0 48px rgb(var(--color-secondary) / 0.15); }
+}
+.glow-pulse { animation: glow-pulse 3s ease-in-out infinite; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+.float-animation { animation: float 4s ease-in-out infinite; }
+
+@keyframes gradient-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.gradient-spin { animation: gradient-spin 3s linear infinite; }
+
+@keyframes scale-in {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.scale-in { animation: scale-in 0.4s ease-out both; }
+
+@keyframes fade-up {
+  0% { transform: translateY(12px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+.fade-up { animation: fade-up 0.5s ease-out both; }
+
+.fade-up-1 { animation: fade-up 0.4s ease-out 0.05s both; }
+.fade-up-2 { animation: fade-up 0.4s ease-out 0.1s both; }
+.fade-up-3 { animation: fade-up 0.4s ease-out 0.15s both; }
+.fade-up-4 { animation: fade-up 0.4s ease-out 0.2s both; }
+.fade-up-5 { animation: fade-up 0.4s ease-out 0.25s both; }
+.fade-up-6 { animation: fade-up 0.4s ease-out 0.3s both; }
+.fade-up-7 { animation: fade-up 0.4s ease-out 0.35s both; }
+.fade-up-8 { animation: fade-up 0.4s ease-out 0.4s both; }
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+.wave { animation: wave 1.2s ease-in-out infinite; }
+
+.press-feedback { transition: transform 0.15s ease, opacity 0.15s ease; }
+.press-feedback:active { transform: scale(0.97); opacity: 0.85; }
+
+.hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.hover-lift:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); }
+
+.border-glow { transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+.border-glow:hover, .border-glow:focus-within {
+  border-color: rgb(var(--color-primary) / 0.4);
+  box-shadow: 0 0 16px rgb(var(--color-primary) / 0.1);
+}
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-spin-slow { animation: spin-slow 20s linear infinite; }
+
+@keyframes breathe-glow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+.animate-breathe { animation: breathe-glow 4s ease-in-out infinite; }
+
+@keyframes vinyl-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-vinyl { animation: vinyl-spin 3s linear infinite; }
+.animate-vinyl-paused { animation-play-state: paused; }
+
+@keyframes role-glow {
+  0%, 100% { box-shadow: 0 0 0px rgb(var(--color-primary) / 0), inset 0 0 0px rgb(var(--color-primary) / 0); }
+  50% { box-shadow: 0 0 24px rgb(var(--color-primary) / 0.25), inset 0 0 12px rgb(var(--color-primary) / 0.05); }
+}
+.role-selected { animation: role-glow 2.5s ease-in-out infinite; }
+
+@keyframes icon-pop {
+  0% { transform: scale(0.6) rotate(-10deg); opacity: 0; }
+  60% { transform: scale(1.15) rotate(3deg); }
+  100% { transform: scale(1.1) rotate(0deg); opacity: 1; }
+}
+.role-icon-active { animation: icon-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+
+@keyframes label-slide {
+  0% { transform: translateY(4px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+.role-label-active { animation: label-slide 0.3s ease-out forwards; }
+
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  70% { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeSlideUp {
+  0% { opacity: 0; transform: translateY(16px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* EQ bars */
+@keyframes eq-bar {
+  0%, 100% { height: 4px; }
+  50% { height: 16px; }
+}
+.eq-bar { animation: eq-bar 0.8s ease-in-out infinite; }
+.eq-bar:nth-child(1) { animation-delay: 0s; }
+.eq-bar:nth-child(2) { animation-delay: 0.2s; }
+.eq-bar:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  80%, 100% { opacity: 0; }
+}
+.pulse-ring { animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(to right, transparent, rgb(var(--color-primary) / 0.3), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+/* Mobile touch */
+@media (hover: none) and (pointer: coarse) {
+  .touch-target { min-height: 44px; min-width: 44px; }
+  .hover-lift:hover { transform: none; box-shadow: none; }
+  .hover-lift:active { transform: scale(0.98); }
+  /* Make hover-only play controls visible on touch devices */
+  .touch-visible { opacity: 1 !important; transform: translateY(0) !important; }
+  /* Larger touch targets for range sliders on touch devices */
+  input[type=range]::-webkit-slider-thumb {
+    height: 20px !important;
+    width: 20px !important;
+  }
+  input[type=range]::-moz-range-thumb {
+    height: 20px !important;
+    width: 20px !important;
+  }
+}
+
+.safe-area-top { padding-top: env(safe-area-inset-top); }
+.safe-area-bottom { padding-bottom: env(safe-area-inset-bottom); }
+
+.no-select {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.scroll-smooth {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+@keyframes haptic-press {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.96); }
+  100% { transform: scale(1); }
+}
+.haptic-press:active { animation: haptic-press 0.15s ease-out; }
+
+/* ── Skeleton loading ─────────────────────────────────────────────── */
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+.skeleton {
+  background: rgb(var(--color-surface-card));
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgb(var(--color-surface-bright) / 0.06), transparent);
+  animation: shimmer 2s infinite linear;
+  background-size: 200% 100%;
+}
+.skeleton-circle { border-radius: 50%; }
+.skeleton-rounded { border-radius: 12px; }
+.skeleton-text {
+  height: 14px;
+  border-radius: 4px;
+  background: rgb(var(--color-surface-card));
+}
+.seleton-text-lg {
+  height: 20px;
+  border-radius: 6px;
+  background: rgb(var(--color-surface-card));
+}
+
+/* ── Skeleton primitives ──────────────────────────────────────────────────
+   The primitives live in src/components/skeleton/. These classes carry the
+   animation and the reduced-motion behaviour so the shimmer is a single
+   compositor-only transform on the GPU rather than one animated element per
+   skeleton node. `.skeleton` above already supplies the surface colour and the
+   gradient overlay; `animation` here replaces its opacity pulse.
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* Variant: shimmer sweeps across; pulse fades; none is a flat placeholder. */
+.skeleton[data-animation='pulse'] { animation: skeleton-pulse 2s ease-in-out infinite; }
+.skeleton[data-animation='shimmer']::after { animation: skeleton-sweep 1.9s infinite linear; }
+.skeleton[data-animation='none']::after { display: none; }
+
+/* Explicitly static skeleton for prefers-reduced-motion, without needing the
+   media query to win a specificity contest over the variant above. */
+.skeleton[data-static='true'] { animation: none; }
+.skeleton[data-static='true']::after { animation: none; opacity: 0.5; }
+
+@keyframes skeleton-sweep {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* A block of stacked lines that reads as a paragraph without inventing words.
+   The last line is shortened so the block does not look like a solid rectangle. */
+.skeleton-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.skeleton-lines > .skeleton:last-child { width: 62%; }
+
+@media (prefers-reduced-motion: reduce) {
+  /* Honour the OS setting even for skeletons rendered outside a data-static
+     wrapper, so no shimmer or pulse animates for these users. */
+  .skeleton,
+  .skeleton::after,
+  .skeleton-pulse,
+  .shimmer {
+    animation: none !important;
+  }
+  .skeleton::after {
+    animation: none !important;
+    opacity: 0.5;
+  }
+}
+
+/* Theme transition for all themed elements */
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* ── Auth screen mobile enhancements ─────────────────────────────── */
+@media (max-width: 480px) {
+  /* Tighter padding on small phones */
+  .auth-card { padding: 1.5rem 1.25rem; }
+  
+  /* Smaller orbs on mobile to prevent performance issues */
+  .auth-orb { 
+    filter: blur(80px);
+    opacity: 0.6;
+  }
+  
+  /* OTP input sizing */
+  .otp-input {
+    width: 2.5rem !important;
+    height: 3rem !important;
+    font-size: 1.125rem !important;
+  }
+  
+  /* Tighter gap between OTP inputs */
+  .otp-grid {
+    gap: 0.5rem !important;
+  }
+}
+
+/* iPhone notch / dynamic island safe areas */
+@supports (padding: env(safe-area-inset-top)) {
+  .auth-screen {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Smooth keyboard open transition */
+.auth-screen {
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+}
+
+/* Mobile input focus ring glow */
+@media (hover: none) and (pointer: coarse) {
+  input:focus {
+    box-shadow: 0 0 0 2px rgb(var(--color-primary) / 0.2);
+  }
+  
+  /* Prevent iOS zoom on input focus */
+  input {
+    font-size: 16px !important;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Celebration layer
+   Ambient only. Never interactive, never above content, and inert when
+   the listener prefers reduced motion.
+   ------------------------------------------------------------------ */
+
+.celebration-layer {
+  contain: strict;
+}
+
+.celebration-ambience {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.celebration-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  pointer-events: none;
+}
+
+.celebration-particle {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+}
+
+/*
+ * Reduced motion: remove the ambient wash motion and any particle field
+ * entirely, leaving only the static edge line. Honoured regardless of what the
+ * component decided, so the preference can never be overridden from JS.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .celebration-layer,
+  .celebration-ambience,
+  .celebration-particle {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .celebration-particle {
+    display: none !important;
+  }
+}

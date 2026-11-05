@@ -1,0 +1,84 @@
+[MusicService] audius.searchArtists failed: Audius 429
+[MusicService] audius.searchArtists failed: Audius 429
+[CircuitBreaker] audius circuit OPEN — skipping for 300s
+[MusicService] audius.searchArtists failed: Audius 429
+[Spotify] searchArtists failed: Spotify: provider restriction
+[Spotify] searchArtists failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] searchArtists failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] searchArtists failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] searchArtists failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] searchArtists failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] searchArtists failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] searchArtists failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] searchArtists failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] searchArtists failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] searchArtists failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] searchArtists failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] searchArtists failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] searchArtists failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] searchArtists failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] searchArtists failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] searchArtists failed: Spotify: provider restriction
+[Spotify] getTrendingTracks failed: Spotify: provider restriction
+[Spotify] getTrendingTracks failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] getTrendingTracks failed: Spotify: provider restriction
+[Trending] Sync failed for deezer: fetch failed
+[Trending] Sync failed for audius: fetch failed
+[Spotify] getTrendingTracks failed: fetch failed
+[MusicService] deezer.getTrendingTracks failed: fetch failed
+[MusicService] audius.getTrendingTracks failed: fetch failed
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] getTrendingTracks failed: fetch failed
+[MusicService] deezer.getTracksByCountry failed: fetch failed
+[MusicService] audius.getTracksByCountry failed: fetch failed
+[CircuitBreaker] deezer circuit OPEN — skipping for 300s
+[MusicService] deezer.getTracksByCountry failed: fetch failed
+[CircuitBreaker] audius circuit OPEN — skipping for 300s
+[MusicService] audius.getTracksByCountry failed: fetch failed
+[Trending] Sync failed for deezer: fetch failed
+[Trending] Sync failed for audius: fetch failed
+[Spotify] getTrendingTracks failed: fetch failed
+[CircuitBreaker] deezer circuit OPEN — skipping for 300s
+[MusicService] deezer.getTrendingTracks failed: fetch failed
+[CircuitBreaker] audius circuit OPEN — skipping for 300s
+[MusicService] audius.getTrendingTracks failed: fetch [Spotify] getTrendingTracks failed: fetch failed
+[CircuitBreaker] deezer circuit OPEN — skipping for 300s
+[MusicSe[Spotify] getTrendingTracks failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] getTrendingTracks failed: Spotify: provider restriction
+[Spotify] getTrendingTracks failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] getTrendingTracks failed: Spotify: provider restriction
+[Spotify] getTrendingTracks failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] getTrendingTracks failed: Spotify: provider restriction
+[Spotify] getTrendingTracks failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] getTrendingTracks failed: Spotify: provider restriction
+[Spotify] getTrendingTracks failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] getTrendingTracks failed: Spotify: provider restriction
+[Spotify] getTrendingTracks failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] getTrendingTracks failed: Spotify: provider restriction
+N — skipping for 300s
+[Spotify] getTrendingTracks failed: Spotify: provider restriction
+[Spotify] getTrendingTracks failed: Spotify: provider restriction
+[CircuitBreaker] spotify circuit OPEN — skipping for 300s
+[Spotify] getTrendingTracks failed: Spotify: provider restriction

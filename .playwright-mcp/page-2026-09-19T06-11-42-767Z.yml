@@ -1,0 +1,35 @@
+- generic [ref=f10e8]:
+  - banner [ref=f10e11]:
+    - generic [ref=f10e14]:
+      - generic [ref=f10e15]:
+        - generic [ref=f10e16]:
+          - heading "Good evening" [level=1] [ref=f10e17]
+          - paragraph [ref=f10e18]: Admin
+        - generic [ref=f10e19]:
+          - button "Search" [ref=f10e20] [cursor=pointer]:
+            - generic [ref=f10e21]: search
+          - button "Notifications" [ref=f10e22] [cursor=pointer]:
+            - generic [ref=f10e23]: notifications
+      - paragraph [ref=f10e24]: Your next favorite song is waiting.
+      - generic [ref=f10e25]:
+        - button "Start listening" [ref=f10e26] [cursor=pointer]:
+          - generic [ref=f10e27]: play_arrow
+          - generic [ref=f10e28]: Start Listening
+        - button "Discover more" [ref=f10e29] [cursor=pointer]:
+          - generic [ref=f10e30]: explore
+          - generic [ref=f10e31]: Discover
+  - navigation [ref=f10e111]:
+    - button "Home" [ref=f10e112] [cursor=pointer]:
+      - generic [ref=f10e113]: home
+    - button "Search" [ref=f10e114] [cursor=pointer]:
+      - generic [ref=f10e115]: search
+    - button "Charts" [ref=f10e116] [cursor=pointer]:
+      - generic [ref=f10e117]: leaderboard
+    - button "Upload" [ref=f10e118] [cursor=pointer]:
+      - generic [ref=f10e119]: cloud_upload
+    - button "Admin" [ref=f10e120] [cursor=pointer]:
+      - generic [ref=f10e121]: admin_panel_settings
+    - button "Library" [ref=f10e122] [cursor=pointer]:
+      - generic [ref=f10e123]: repeat
+    - button "Profile" [ref=f10e124] [cursor=pointer]:
+      - generic [ref=f10e125]: person

@@ -1,0 +1,311 @@
+- generic [ref=f5e8]:
+  - generic [ref=f5e10]:
+    - banner [ref=f5e11]:
+      - generic [ref=f5e14]:
+        - generic [ref=f5e15]:
+          - generic [ref=f5e16]:
+            - heading "Good evening" [level=1] [ref=f5e17]
+            - paragraph [ref=f5e18]: Admin
+          - generic [ref=f5e19]:
+            - button "Search" [ref=f5e20] [cursor=pointer]:
+              - generic [ref=f5e21]: search
+            - button "Notifications" [ref=f5e22] [cursor=pointer]:
+              - generic [ref=f5e23]: notifications
+        - paragraph [ref=f5e24]: Your next favorite song is waiting.
+        - generic [ref=f5e25]:
+          - button "Start listening" [ref=f5e26] [cursor=pointer]:
+            - generic [ref=f5e27]: play_arrow
+            - generic [ref=f5e28]: Start Listening
+          - button "Discover more" [ref=f5e29] [cursor=pointer]:
+            - generic [ref=f5e30]: explore
+            - generic [ref=f5e31]: Discover
+    - generic [ref=f5e33]:
+      - generic [ref=f5e128]:
+        - button "Trending" [ref=f5e129] [cursor=pointer]:
+          - generic [ref=f5e130]: trending_up
+        - button "New Releases" [ref=f5e132] [cursor=pointer]:
+          - generic [ref=f5e133]: new_releases
+        - button "Workout" [ref=f5e135] [cursor=pointer]:
+          - generic [ref=f5e136]: fitness_center
+        - button "Chill" [ref=f5e138] [cursor=pointer]:
+          - generic [ref=f5e139]: headphones
+      - generic [ref=f5e141]:
+        - generic [ref=f5e142]:
+          - heading "Trending Music" [level=2] [ref=f5e143]
+          - generic [ref=f5e144]: Full Tracks
+        - generic [ref=f5e145]:
+          - button "Fall play_arrow Full Fall Davido" [ref=f5e146] [cursor=pointer]:
+            - generic [ref=f5e147]:
+              - img "Fall" [ref=f5e148]
+              - generic [ref=f5e150]: play_arrow
+              - generic [ref=f5e152]: Full
+            - paragraph [ref=f5e153]: Fall
+            - paragraph [ref=f5e154]: Davido
+          - button "Van Snyder - Rave! Code Radio 024 - 2026-09-07 play_arrow audius Full Van Snyder - Rave! Code Radio 024 - 2026-09-07 Van Snyder" [ref=f5e155] [cursor=pointer]:
+            - generic [ref=f5e156]:
+              - img "Van Snyder - Rave! Code Radio 024 - 2026-09-07" [ref=f5e157]
+              - generic [ref=f5e159]: play_arrow
+              - generic [ref=f5e161]: audius
+              - generic [ref=f5e162]: Full
+            - paragraph [ref=f5e163]: Van Snyder - Rave! Code Radio 024 - 2026-09-07
+            - paragraph [ref=f5e164]: Van Snyder
+          - button "Jazcardan - Nature play_arrow audius Full Jazcardan - Nature Jazcardan" [ref=f5e165] [cursor=pointer]:
+            - generic [ref=f5e166]:
+              - img "Jazcardan - Nature" [ref=f5e167]
+              - generic [ref=f5e169]: play_arrow
+              - generic [ref=f5e171]: audius
+              - generic [ref=f5e172]: Full
+            - paragraph [ref=f5e173]: Jazcardan - Nature
+            - paragraph [ref=f5e174]: Jazcardan
+          - button "NiGHTS demo 2 play_arrow audius Full NiGHTS demo 2 MAi" [ref=f5e175] [cursor=pointer]:
+            - generic [ref=f5e176]:
+              - img "NiGHTS demo 2" [ref=f5e177]
+              - generic [ref=f5e179]: play_arrow
+              - generic [ref=f5e181]: audius
+              - generic [ref=f5e182]: Full
+            - paragraph [ref=f5e183]: NiGHTS demo 2
+            - paragraph [ref=f5e184]: MAi
+          - button "Skipping In The Woods (Hendrik Joerges Remix) play_arrow audius Full Skipping In The Woods (Hendrik Joerges Remix) Hendrik Joerges" [ref=f5e185] [cursor=pointer]:
+            - generic [ref=f5e186]:
+              - img "Skipping In The Woods (Hendrik Joerges Remix)" [ref=f5e187]
+              - generic [ref=f5e189]: play_arrow
+              - generic [ref=f5e191]: audius
+              - generic [ref=f5e192]: Full
+            - paragraph [ref=f5e193]: Skipping In The Woods (Hendrik Joerges Remix)
+            - paragraph [ref=f5e194]: Hendrik Joerges
+          - button "VOLO x Good Lee - Relief play_arrow audius Full VOLO x Good Lee - Relief VOLO" [ref=f5e195] [cursor=pointer]:
+            - generic [ref=f5e196]:
+              - img "VOLO x Good Lee - Relief" [ref=f5e197]
+              - generic [ref=f5e199]: play_arrow
+              - generic [ref=f5e201]: audius
+              - generic [ref=f5e202]: Full
+            - paragraph [ref=f5e203]: VOLO x Good Lee - Relief
+            - paragraph [ref=f5e204]: VOLO
+          - button "Tony Metric - Golden (Radio Edit) play_arrow audius Full Tony Metric - Golden (Radio Edit) Tony Metric" [ref=f5e205] [cursor=pointer]:
+            - generic [ref=f5e206]:
+              - img "Tony Metric - Golden (Radio Edit)" [ref=f5e207]
+              - generic [ref=f5e209]: play_arrow
+              - generic [ref=f5e211]: audius
+              - generic [ref=f5e212]: Full
+            - paragraph [ref=f5e213]: Tony Metric - Golden (Radio Edit)
+            - paragraph [ref=f5e214]: Tony Metric
+          - button "Dream play_arrow audius Full Dream KOSM!X" [ref=f5e215] [cursor=pointer]:
+            - generic [ref=f5e216]:
+              - img "Dream" [ref=f5e217]
+              - generic [ref=f5e219]: play_arrow
+              - generic [ref=f5e221]: audius
+              - generic [ref=f5e222]: Full
+            - paragraph [ref=f5e223]: Dream
+            - paragraph [ref=f5e224]: KOSM!X
+          - button "Live It Up (Original Mix) play_arrow audius Full Live It Up (Original Mix) GORDO DJ (BR)" [ref=f5e225] [cursor=pointer]:
+            - generic [ref=f5e226]:
+              - img "Live It Up (Original Mix)" [ref=f5e227]
+              - generic [ref=f5e229]: play_arrow
+              - generic [ref=f5e231]: audius
+              - generic [ref=f5e232]: Full
+            - paragraph [ref=f5e233]: Live It Up (Original Mix)
+            - paragraph [ref=f5e234]: GORDO DJ (BR)
+          - button "4am - Our Lady Peace (Acoustic Cover) play_arrow audius Full 4am - Our Lady Peace (Acoustic Cover) Jason Langvee" [ref=f5e235] [cursor=pointer]:
+            - generic [ref=f5e236]:
+              - img "4am - Our Lady Peace (Acoustic Cover)" [ref=f5e237]
+              - generic [ref=f5e239]: play_arrow
+              - generic [ref=f5e241]: audius
+              - generic [ref=f5e242]: Full
+            - paragraph [ref=f5e243]: 4am - Our Lady Peace (Acoustic Cover)
+            - paragraph [ref=f5e244]: Jason Langvee
+          - button "SINQ @ KIYB 4/25 (live trap, dubstep, techno, bass house set) play_arrow audius Full SINQ @ KIYB 4/25 (live trap, dubstep, techno, bass house set) SINQ" [ref=f5e245] [cursor=pointer]:
+            - generic [ref=f5e246]:
+              - img "SINQ @ KIYB 4/25 (live trap, dubstep, techno, bass house set)" [ref=f5e247]
+              - generic [ref=f5e249]: play_arrow
+              - generic [ref=f5e251]: audius
+              - generic [ref=f5e252]: Full
+            - paragraph [ref=f5e253]: SINQ @ KIYB 4/25 (live trap, dubstep, techno, bass house set)
+            - paragraph [ref=f5e254]: SINQ
+          - button "Marcellus & Healy - Funk Machines (Original Mix) AMPM.audio Master V5 play_arrow audius Full Marcellus & Healy - Funk Machines (Original Mix) AMPM.audio Master V5 Marcellus (UK)" [ref=f5e255] [cursor=pointer]:
+            - generic [ref=f5e256]:
+              - img "Marcellus & Healy - Funk Machines (Original Mix) AMPM.audio Master V5" [ref=f5e257]
+              - generic [ref=f5e259]: play_arrow
+              - generic [ref=f5e261]: audius
+              - generic [ref=f5e262]: Full
+            - paragraph [ref=f5e263]: Marcellus & Healy - Funk Machines (Original Mix) AMPM.audio Master V5
+            - paragraph [ref=f5e264]: Marcellus (UK)
+      - generic [ref=f5e265]:
+        - heading "Top Charts" [level=2] [ref=f5e267]
+        - generic [ref=f5e268]:
+          - button "1 Van Snyder - Rave! Code Radio 024 - 2026-09-07 play_arrow Van Snyder - Rave! Code Radio 024 - 2026-09-07 Van Snyder play_arrow" [ref=f5e269] [cursor=pointer]:
+            - generic [ref=f5e270]: "1"
+            - generic [ref=f5e271]:
+              - img "Van Snyder - Rave! Code Radio 024 - 2026-09-07" [ref=f5e272]
+              - generic [ref=f5e273]: play_arrow
+            - generic [ref=f5e275]:
+              - paragraph [ref=f5e276]: Van Snyder - Rave! Code Radio 024 - 2026-09-07
+              - paragraph [ref=f5e277]: Van Snyder
+            - generic [ref=f5e278]: play_arrow
+          - button "2 Jazcardan - Nature play_arrow Jazcardan - Nature Jazcardan play_arrow" [ref=f5e281] [cursor=pointer]:
+            - generic [ref=f5e282]: "2"
+            - generic [ref=f5e283]:
+              - img "Jazcardan - Nature" [ref=f5e284]
+              - generic [ref=f5e285]: play_arrow
+            - generic [ref=f5e287]:
+              - paragraph [ref=f5e288]: Jazcardan - Nature
+              - paragraph [ref=f5e289]: Jazcardan
+            - generic [ref=f5e290]: play_arrow
+          - button "3 NiGHTS demo 2 play_arrow NiGHTS demo 2 MAi play_arrow" [ref=f5e293] [cursor=pointer]:
+            - generic [ref=f5e294]: "3"
+            - generic [ref=f5e295]:
+              - img "NiGHTS demo 2" [ref=f5e296]
+              - generic [ref=f5e297]: play_arrow
+            - generic [ref=f5e299]:
+              - paragraph [ref=f5e300]: NiGHTS demo 2
+              - paragraph [ref=f5e301]: MAi
+            - generic [ref=f5e302]: play_arrow
+          - button "4 Skipping In The Woods (Hendrik Joerges Remix) play_arrow Skipping In The Woods (Hendrik Joerges Remix) Hendrik Joerges play_arrow" [ref=f5e305] [cursor=pointer]:
+            - generic [ref=f5e306]: "4"
+            - generic [ref=f5e307]:
+              - img "Skipping In The Woods (Hendrik Joerges Remix)" [ref=f5e308]
+              - generic [ref=f5e309]: play_arrow
+            - generic [ref=f5e311]:
+              - paragraph [ref=f5e312]: Skipping In The Woods (Hendrik Joerges Remix)
+              - paragraph [ref=f5e313]: Hendrik Joerges
+            - generic [ref=f5e314]: play_arrow
+          - button "5 VOLO x Good Lee - Relief play_arrow VOLO x Good Lee - Relief VOLO play_arrow" [ref=f5e317] [cursor=pointer]:
+            - generic [ref=f5e318]: "5"
+            - generic [ref=f5e319]:
+              - img "VOLO x Good Lee - Relief" [ref=f5e320]
+              - generic [ref=f5e321]: play_arrow
+            - generic [ref=f5e323]:
+              - paragraph [ref=f5e324]: VOLO x Good Lee - Relief
+              - paragraph [ref=f5e325]: VOLO
+            - generic [ref=f5e326]: play_arrow
+          - button "6 Tony Metric - Golden (Radio Edit) play_arrow Tony Metric - Golden (Radio Edit) Tony Metric play_arrow" [ref=f5e329] [cursor=pointer]:
+            - generic [ref=f5e330]: "6"
+            - generic [ref=f5e331]:
+              - img "Tony Metric - Golden (Radio Edit)" [ref=f5e332]
+              - generic [ref=f5e333]: play_arrow
+            - generic [ref=f5e335]:
+              - paragraph [ref=f5e336]: Tony Metric - Golden (Radio Edit)
+              - paragraph [ref=f5e337]: Tony Metric
+            - generic [ref=f5e338]: play_arrow
+          - button "7 Dream play_arrow Dream KOSM!X play_arrow" [ref=f5e341] [cursor=pointer]:
+            - generic [ref=f5e342]: "7"
+            - generic [ref=f5e343]:
+              - img "Dream" [ref=f5e344]
+              - generic [ref=f5e345]: play_arrow
+            - generic [ref=f5e347]:
+              - paragraph [ref=f5e348]: Dream
+              - paragraph [ref=f5e349]: KOSM!X
+            - generic [ref=f5e350]: play_arrow
+          - button "8 Live It Up (Original Mix) play_arrow Live It Up (Original Mix) GORDO DJ (BR) play_arrow" [ref=f5e353] [cursor=pointer]:
+            - generic [ref=f5e354]: "8"
+            - generic [ref=f5e355]:
+              - img "Live It Up (Original Mix)" [ref=f5e356]
+              - generic [ref=f5e357]: play_arrow
+            - generic [ref=f5e359]:
+              - paragraph [ref=f5e360]: Live It Up (Original Mix)
+              - paragraph [ref=f5e361]: GORDO DJ (BR)
+            - generic [ref=f5e362]: play_arrow
+      - generic [ref=f5e365]:
+        - heading "Popular Artists" [level=2] [ref=f5e367]
+        - generic [ref=f5e368]:
+          - button [ref=f5e369] [cursor=pointer]:
+            - img "Davido" [ref=f5e371]
+            - paragraph [ref=f5e373]: Davido
+          - button [ref=f5e374] [cursor=pointer]:
+            - img "Van Snyder" [ref=f5e376]
+            - paragraph [ref=f5e378]: Van Snyder
+          - button [ref=f5e379] [cursor=pointer]:
+            - img "Jazcardan" [ref=f5e381]
+            - paragraph [ref=f5e383]: Jazcardan
+          - button [ref=f5e384] [cursor=pointer]:
+            - img "MAi" [ref=f5e386]
+            - paragraph [ref=f5e388]: MAi
+          - button [ref=f5e389] [cursor=pointer]:
+            - img "Hendrik Joerges" [ref=f5e391]
+            - paragraph [ref=f5e393]: Hendrik Joerges
+          - button [ref=f5e394] [cursor=pointer]:
+            - img "VOLO" [ref=f5e396]
+            - paragraph [ref=f5e398]: VOLO
+          - button [ref=f5e399] [cursor=pointer]:
+            - img "Tony Metric" [ref=f5e401]
+            - paragraph [ref=f5e403]: Tony Metric
+          - button [ref=f5e404] [cursor=pointer]:
+            - img "KOSM!X" [ref=f5e406]
+            - paragraph [ref=f5e408]: KOSM!X
+          - button [ref=f5e409] [cursor=pointer]:
+            - img "GORDO DJ (BR)" [ref=f5e411]
+            - paragraph [ref=f5e413]: GORDO DJ (BR)
+          - button [ref=f5e414] [cursor=pointer]:
+            - img "Jason Langvee" [ref=f5e416]
+            - paragraph [ref=f5e418]: Jason Langvee
+      - generic [ref=f5e419]:
+        - heading "Browse Genres" [level=2] [ref=f5e421]
+        - generic [ref=f5e422]:
+          - button "graphic_eq All" [ref=f5e423] [cursor=pointer]:
+            - generic [ref=f5e424]: graphic_eq
+            - paragraph [ref=f5e425]: All
+          - button "music_note Pop" [ref=f5e426] [cursor=pointer]:
+            - generic [ref=f5e427]: music_note
+            - paragraph [ref=f5e428]: Pop
+          - button "bolt Rap/Hip Hop" [ref=f5e429] [cursor=pointer]:
+            - generic [ref=f5e430]: bolt
+            - paragraph [ref=f5e431]: Rap/Hip Hop
+          - button "favorite Rock" [ref=f5e432] [cursor=pointer]:
+            - generic [ref=f5e433]: favorite
+            - paragraph [ref=f5e434]: Rock
+          - button "psychology Dance" [ref=f5e435] [cursor=pointer]:
+            - generic [ref=f5e436]: psychology
+            - paragraph [ref=f5e437]: Dance
+          - button "nightlife R&B" [ref=f5e438] [cursor=pointer]:
+            - generic [ref=f5e439]: nightlife
+            - paragraph [ref=f5e440]: R&B
+          - button "piano Alternative" [ref=f5e441] [cursor=pointer]:
+            - generic [ref=f5e442]: piano
+            - paragraph [ref=f5e443]: Alternative
+          - button "mic Electro" [ref=f5e444] [cursor=pointer]:
+            - generic [ref=f5e445]: mic
+            - paragraph [ref=f5e446]: Electro
+          - button "library_music Folk" [ref=f5e447] [cursor=pointer]:
+            - generic [ref=f5e448]: library_music
+            - paragraph [ref=f5e449]: Folk
+      - generic [ref=f5e450]:
+        - heading "Explore by Country" [level=2] [ref=f5e452]
+        - generic [ref=f5e453]:
+          - button "🇳🇬 Nigeria" [ref=f5e454] [cursor=pointer]:
+            - generic [ref=f5e455]: 🇳🇬
+            - generic [ref=f5e456]: Nigeria
+          - button "🇺🇸 United States" [ref=f5e457] [cursor=pointer]:
+            - generic [ref=f5e458]: 🇺🇸
+            - generic [ref=f5e459]: United States
+          - button "🇬🇧 United Kingdom" [ref=f5e460] [cursor=pointer]:
+            - generic [ref=f5e461]: 🇬🇧
+            - generic [ref=f5e462]: United Kingdom
+          - button "🇿🇦 South Africa" [ref=f5e463] [cursor=pointer]:
+            - generic [ref=f5e464]: 🇿🇦
+            - generic [ref=f5e465]: South Africa
+          - button "🇬🇭 Ghana" [ref=f5e466] [cursor=pointer]:
+            - generic [ref=f5e467]: 🇬🇭
+            - generic [ref=f5e468]: Ghana
+          - button "🇧🇷 Brazil" [ref=f5e469] [cursor=pointer]:
+            - generic [ref=f5e470]: 🇧🇷
+            - generic [ref=f5e471]: Brazil
+          - button "🇫🇷 France" [ref=f5e472] [cursor=pointer]:
+            - generic [ref=f5e473]: 🇫🇷
+            - generic [ref=f5e474]: France
+          - button "🇯🇵 Japan" [ref=f5e475] [cursor=pointer]:
+            - generic [ref=f5e476]: 🇯🇵
+            - generic [ref=f5e477]: Japan
+  - navigation [ref=f5e111]:
+    - button "Home" [ref=f5e112] [cursor=pointer]:
+      - generic [ref=f5e113]: home
+    - button "Search" [ref=f5e114] [cursor=pointer]:
+      - generic [ref=f5e115]: search
+    - button "Charts" [ref=f5e116] [cursor=pointer]:
+      - generic [ref=f5e117]: leaderboard
+    - button "Upload" [ref=f5e118] [cursor=pointer]:
+      - generic [ref=f5e119]: cloud_upload
+    - button "Admin" [ref=f5e120] [cursor=pointer]:
+      - generic [ref=f5e121]: admin_panel_settings
+    - button "Library" [ref=f5e122] [cursor=pointer]:
+      - generic [ref=f5e123]: repeat
+    - button "Profile" [ref=f5e124] [cursor=pointer]:
+      - generic [ref=f5e125]: person

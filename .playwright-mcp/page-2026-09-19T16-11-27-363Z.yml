@@ -1,0 +1,372 @@
+- generic [ref=e8]:
+  - generic [ref=e10]:
+    - banner [ref=e11]:
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - generic [ref=e17]:
+            - heading "Good morning" [level=1] [ref=e18]
+            - paragraph [ref=e19]: Admin
+          - generic [ref=e20]:
+            - button "Search" [ref=e21] [cursor=pointer]:
+              - generic [ref=e22]: search
+            - button "Notifications" [ref=e23] [cursor=pointer]:
+              - generic [ref=e24]: notifications
+        - paragraph [ref=e25]: Your next favorite song is waiting.
+        - generic [ref=e26]:
+          - button "Start listening" [ref=e27] [cursor=pointer]:
+            - generic [ref=e28]: play_arrow
+            - generic [ref=e29]: Start Listening
+          - button "Discover more" [ref=e30] [cursor=pointer]:
+            - generic [ref=e31]: explore
+            - generic [ref=e32]: Discover
+    - generic [ref=e34]:
+      - generic [ref=e36]:
+        - button "Trending" [ref=e37] [cursor=pointer]:
+          - generic [ref=e38]: trending_up
+        - button "New Releases" [ref=e40] [cursor=pointer]:
+          - generic [ref=e41]: new_releases
+        - button "Workout" [ref=e43] [cursor=pointer]:
+          - generic [ref=e44]: fitness_center
+        - button "Chill" [ref=e46] [cursor=pointer]:
+          - generic [ref=e47]: headphones
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - heading "Trending Music" [level=2] [ref=e51]
+          - generic [ref=e52]: Full Tracks
+        - generic [ref=e53]:
+          - button "Ordinary Person play_arrow Full Ordinary Person Anirudh Ravichander" [ref=e54] [cursor=pointer]:
+            - generic [ref=e55]:
+              - img "Ordinary Person" [ref=e56]
+              - generic [ref=e58]: play_arrow
+              - generic [ref=e60]: Full
+            - paragraph [ref=e61]: Ordinary Person
+            - paragraph [ref=e62]: Anirudh Ravichander
+          - button "Unavailable (feat. Musa Keys) play_arrow Full Unavailable (feat. Musa Keys) Davido" [ref=e63] [cursor=pointer]:
+            - generic [ref=e64]:
+              - img "Unavailable (feat. Musa Keys)" [ref=e65]
+              - generic [ref=e67]: play_arrow
+              - generic [ref=e69]: Full
+            - paragraph [ref=e70]: Unavailable (feat. Musa Keys)
+            - paragraph [ref=e71]: Davido
+          - button "Calm Down (feat. Selena Gomez) play_arrow Full Calm Down (feat. Selena Gomez) Rema" [ref=e72] [cursor=pointer]:
+            - generic [ref=e73]:
+              - img "Calm Down (feat. Selena Gomez)" [ref=e74]
+              - generic [ref=e76]: play_arrow
+              - generic [ref=e78]: Full
+            - paragraph [ref=e79]: Calm Down (feat. Selena Gomez)
+            - paragraph [ref=e80]: Rema
+          - button "Lonely at the Top play_arrow Full Lonely at the Top Asake" [ref=e81] [cursor=pointer]:
+            - generic [ref=e82]:
+              - img "Lonely at the Top" [ref=e83]
+              - generic [ref=e85]: play_arrow
+              - generic [ref=e87]: Full
+            - paragraph [ref=e88]: Lonely at the Top
+            - paragraph [ref=e89]: Asake
+          - button "Arabic Kuthu play_arrow Full Arabic Kuthu Anirudh Ravichander" [ref=e90] [cursor=pointer]:
+            - generic [ref=e91]:
+              - img "Arabic Kuthu" [ref=e92]
+              - generic [ref=e94]: play_arrow
+              - generic [ref=e96]: Full
+            - paragraph [ref=e97]: Arabic Kuthu
+            - paragraph [ref=e98]: Anirudh Ravichander
+          - button "Bloody Sweet play_arrow Full Bloody Sweet Anirudh Ravichander" [ref=e99] [cursor=pointer]:
+            - generic [ref=e100]:
+              - img "Bloody Sweet" [ref=e101]
+              - generic [ref=e103]: play_arrow
+              - generic [ref=e105]: Full
+            - paragraph [ref=e106]: Bloody Sweet
+            - paragraph [ref=e107]: Anirudh Ravichander
+          - button "Fall play_arrow Full Fall Davido" [ref=e108] [cursor=pointer]:
+            - generic [ref=e109]:
+              - img "Fall" [ref=e110]
+              - generic [ref=e112]: play_arrow
+              - generic [ref=e114]: Full
+            - paragraph [ref=e115]: Fall
+            - paragraph [ref=e116]: Davido
+          - button "Terminator play_arrow Full Terminator Asake" [ref=e117] [cursor=pointer]:
+            - generic [ref=e118]:
+              - img "Terminator" [ref=e119]
+              - generic [ref=e121]: play_arrow
+              - generic [ref=e123]: Full
+            - paragraph [ref=e124]: Terminator
+            - paragraph [ref=e125]: Asake
+          - button "Obsessed With You play_arrow Full Obsessed With You Central Cee" [ref=e126] [cursor=pointer]:
+            - generic [ref=e127]:
+              - img "Obsessed With You" [ref=e128]
+              - generic [ref=e130]: play_arrow
+              - generic [ref=e132]: Full
+            - paragraph [ref=e133]: Obsessed With You
+            - paragraph [ref=e134]: Central Cee
+          - button "Lokiverse 2.0 play_arrow Full Lokiverse 2.0 Anirudh Ravichander" [ref=e135] [cursor=pointer]:
+            - generic [ref=e136]:
+              - img "Lokiverse 2.0" [ref=e137]
+              - generic [ref=e139]: play_arrow
+              - generic [ref=e141]: Full
+            - paragraph [ref=e142]: Lokiverse 2.0
+            - paragraph [ref=e143]: Anirudh Ravichander
+          - button "Naa Ready play_arrow Full Naa Ready Anirudh Ravichander" [ref=e144] [cursor=pointer]:
+            - generic [ref=e145]:
+              - img "Naa Ready" [ref=e146]
+              - generic [ref=e148]: play_arrow
+              - generic [ref=e150]: Full
+            - paragraph [ref=e151]: Naa Ready
+            - paragraph [ref=e152]: Anirudh Ravichander
+          - button "Badass play_arrow Full Badass Anirudh Ravichander" [ref=e153] [cursor=pointer]:
+            - generic [ref=e154]:
+              - img "Badass" [ref=e155]
+              - generic [ref=e157]: play_arrow
+              - generic [ref=e159]: Full
+            - paragraph [ref=e160]: Badass
+            - paragraph [ref=e161]: Anirudh Ravichander
+      - generic [ref=e162]:
+        - heading "Top Charts" [level=2] [ref=e164]
+        - generic [ref=e165]:
+          - button "1 Ordinary Person play_arrow Ordinary Person Anirudh Ravichander play_arrow" [ref=e166] [cursor=pointer]:
+            - generic [ref=e167]: "1"
+            - generic [ref=e168]:
+              - img "Ordinary Person" [ref=e169]
+              - generic [ref=e170]: play_arrow
+            - generic [ref=e172]:
+              - paragraph [ref=e173]: Ordinary Person
+              - paragraph [ref=e174]: Anirudh Ravichander
+            - generic [ref=e175]: play_arrow
+          - button "2 Unavailable (feat. Musa Keys) play_arrow Unavailable (feat. Musa Keys) Davido play_arrow" [ref=e178] [cursor=pointer]:
+            - generic [ref=e179]: "2"
+            - generic [ref=e180]:
+              - img "Unavailable (feat. Musa Keys)" [ref=e181]
+              - generic [ref=e182]: play_arrow
+            - generic [ref=e184]:
+              - paragraph [ref=e185]: Unavailable (feat. Musa Keys)
+              - paragraph [ref=e186]: Davido
+            - generic [ref=e187]: play_arrow
+          - button "3 Calm Down (feat. Selena Gomez) play_arrow Calm Down (feat. Selena Gomez) Rema play_arrow" [ref=e190] [cursor=pointer]:
+            - generic [ref=e191]: "3"
+            - generic [ref=e192]:
+              - img "Calm Down (feat. Selena Gomez)" [ref=e193]
+              - generic [ref=e194]: play_arrow
+            - generic [ref=e196]:
+              - paragraph [ref=e197]: Calm Down (feat. Selena Gomez)
+              - paragraph [ref=e198]: Rema
+            - generic [ref=e199]: play_arrow
+          - button "4 Lonely at the Top play_arrow Lonely at the Top Asake play_arrow" [ref=e202] [cursor=pointer]:
+            - generic [ref=e203]: "4"
+            - generic [ref=e204]:
+              - img "Lonely at the Top" [ref=e205]
+              - generic [ref=e206]: play_arrow
+            - generic [ref=e208]:
+              - paragraph [ref=e209]: Lonely at the Top
+              - paragraph [ref=e210]: Asake
+            - generic [ref=e211]: play_arrow
+          - button "5 Arabic Kuthu play_arrow Arabic Kuthu Anirudh Ravichander play_arrow" [ref=e214] [cursor=pointer]:
+            - generic [ref=e215]: "5"
+            - generic [ref=e216]:
+              - img "Arabic Kuthu" [ref=e217]
+              - generic [ref=e218]: play_arrow
+            - generic [ref=e220]:
+              - paragraph [ref=e221]: Arabic Kuthu
+              - paragraph [ref=e222]: Anirudh Ravichander
+            - generic [ref=e223]: play_arrow
+          - button "6 Bloody Sweet play_arrow Bloody Sweet Anirudh Ravichander play_arrow" [ref=e226] [cursor=pointer]:
+            - generic [ref=e227]: "6"
+            - generic [ref=e228]:
+              - img "Bloody Sweet" [ref=e229]
+              - generic [ref=e230]: play_arrow
+            - generic [ref=e232]:
+              - paragraph [ref=e233]: Bloody Sweet
+              - paragraph [ref=e234]: Anirudh Ravichander
+            - generic [ref=e235]: play_arrow
+          - button "7 Fall play_arrow Fall Davido play_arrow" [ref=e238] [cursor=pointer]:
+            - generic [ref=e239]: "7"
+            - generic [ref=e240]:
+              - img "Fall" [ref=e241]
+              - generic [ref=e242]: play_arrow
+            - generic [ref=e244]:
+              - paragraph [ref=e245]: Fall
+              - paragraph [ref=e246]: Davido
+            - generic [ref=e247]: play_arrow
+          - button "8 Terminator play_arrow Terminator Asake play_arrow" [ref=e250] [cursor=pointer]:
+            - generic [ref=e251]: "8"
+            - generic [ref=e252]:
+              - img "Terminator" [ref=e253]
+              - generic [ref=e254]: play_arrow
+            - generic [ref=e256]:
+              - paragraph [ref=e257]: Terminator
+              - paragraph [ref=e258]: Asake
+            - generic [ref=e259]: play_arrow
+      - generic [ref=e262]:
+        - heading "Popular Artists" [level=2] [ref=e264]
+        - generic [ref=e265]:
+          - button [ref=e266] [cursor=pointer]:
+            - img "Anirudh Ravichander" [ref=e268]
+            - paragraph [ref=e270]: Anirudh Ravichander
+          - button [ref=e271] [cursor=pointer]:
+            - img "Davido" [ref=e273]
+            - paragraph [ref=e275]: Davido
+          - button [ref=e276] [cursor=pointer]:
+            - img "Rema" [ref=e278]
+            - paragraph [ref=e280]: Rema
+          - button [ref=e281] [cursor=pointer]:
+            - img "Asake" [ref=e283]
+            - paragraph [ref=e285]: Asake
+          - button [ref=e286] [cursor=pointer]:
+            - img "Central Cee" [ref=e288]
+            - paragraph [ref=e290]: Central Cee
+          - button [ref=e291] [cursor=pointer]:
+            - img "Yuvan Shankar Raja" [ref=e293]
+            - paragraph [ref=e295]: Yuvan Shankar Raja
+          - button [ref=e296] [cursor=pointer]:
+            - img "Ilaiyaraaja" [ref=e298]
+            - paragraph [ref=e300]: Ilaiyaraaja
+          - button [ref=e301] [cursor=pointer]:
+            - img "Kavinsky" [ref=e303]
+            - paragraph [ref=e305]: Kavinsky
+          - button [ref=e306] [cursor=pointer]:
+            - img "The Weeknd" [ref=e308]
+            - paragraph [ref=e310]: The Weeknd
+          - button [ref=e311] [cursor=pointer]:
+            - img "Wizkid" [ref=e313]
+            - paragraph [ref=e315]: Wizkid
+      - generic [ref=e316]:
+        - heading "Browse Genres" [level=2] [ref=e318]
+        - generic [ref=e319]:
+          - button "graphic_eq Tamil Hits" [ref=e320] [cursor=pointer]:
+            - generic [ref=e321]: graphic_eq
+            - paragraph [ref=e322]: Tamil Hits
+          - button "music_note Classical" [ref=e323] [cursor=pointer]:
+            - generic [ref=e324]: music_note
+            - paragraph [ref=e325]: Classical
+          - button "bolt EDM" [ref=e326] [cursor=pointer]:
+            - generic [ref=e327]: bolt
+            - paragraph [ref=e328]: EDM
+          - button "favorite Pop" [ref=e329] [cursor=pointer]:
+            - generic [ref=e330]: favorite
+            - paragraph [ref=e331]: Pop
+          - button "psychology Chill Vibe" [ref=e332] [cursor=pointer]:
+            - generic [ref=e333]: psychology
+            - paragraph [ref=e334]: Chill Vibe
+          - button "nightlife Afrobeats" [ref=e335] [cursor=pointer]:
+            - generic [ref=e336]: nightlife
+            - paragraph [ref=e337]: Afrobeats
+          - button "piano Amapiano" [ref=e338] [cursor=pointer]:
+            - generic [ref=e339]: piano
+            - paragraph [ref=e340]: Amapiano
+          - button "mic UK Rap" [ref=e341] [cursor=pointer]:
+            - generic [ref=e342]: mic
+            - paragraph [ref=e343]: UK Rap
+      - generic [ref=e344]:
+        - heading "Explore by Country" [level=2] [ref=e346]
+        - generic [ref=e347]:
+          - button "🇳🇬 Nigeria" [ref=e348] [cursor=pointer]:
+            - generic [ref=e349]: 🇳🇬
+            - generic [ref=e350]: Nigeria
+          - button "🇺🇸 United States" [ref=e351] [cursor=pointer]:
+            - generic [ref=e352]: 🇺🇸
+            - generic [ref=e353]: United States
+          - button "🇬🇧 United Kingdom" [ref=e354] [cursor=pointer]:
+            - generic [ref=e355]: 🇬🇧
+            - generic [ref=e356]: United Kingdom
+          - button "🇿🇦 South Africa" [ref=e357] [cursor=pointer]:
+            - generic [ref=e358]: 🇿🇦
+            - generic [ref=e359]: South Africa
+          - button "🇬🇭 Ghana" [ref=e360] [cursor=pointer]:
+            - generic [ref=e361]: 🇬🇭
+            - generic [ref=e362]: Ghana
+          - button "🇧🇷 Brazil" [ref=e363] [cursor=pointer]:
+            - generic [ref=e364]: 🇧🇷
+            - generic [ref=e365]: Brazil
+          - button "🇫🇷 France" [ref=e366] [cursor=pointer]:
+            - generic [ref=e367]: 🇫🇷
+            - generic [ref=e368]: France
+          - button "🇯🇵 Japan" [ref=e369] [cursor=pointer]:
+            - generic [ref=e370]: 🇯🇵
+            - generic [ref=e371]: Japan
+      - generic [ref=e372]:
+        - generic [ref=e373]:
+          - heading "From United States" [level=2] [ref=e374]
+          - generic [ref=e375]: United States
+        - generic [ref=e376]:
+          - button "Ordinary Person play_arrow Full Ordinary Person Anirudh Ravichander" [ref=e377] [cursor=pointer]:
+            - generic [ref=e378]:
+              - img "Ordinary Person" [ref=e379]
+              - generic [ref=e381]: play_arrow
+              - generic [ref=e383]: Full
+            - paragraph [ref=e384]: Ordinary Person
+            - paragraph [ref=e385]: Anirudh Ravichander
+          - button "Unavailable (feat. Musa Keys) play_arrow Full Unavailable (feat. Musa Keys) Davido" [ref=e386] [cursor=pointer]:
+            - generic [ref=e387]:
+              - img "Unavailable (feat. Musa Keys)" [ref=e388]
+              - generic [ref=e390]: play_arrow
+              - generic [ref=e392]: Full
+            - paragraph [ref=e393]: Unavailable (feat. Musa Keys)
+            - paragraph [ref=e394]: Davido
+          - button "Calm Down (feat. Selena Gomez) play_arrow Full Calm Down (feat. Selena Gomez) Rema" [ref=e395] [cursor=pointer]:
+            - generic [ref=e396]:
+              - img "Calm Down (feat. Selena Gomez)" [ref=e397]
+              - generic [ref=e399]: play_arrow
+              - generic [ref=e401]: Full
+            - paragraph [ref=e402]: Calm Down (feat. Selena Gomez)
+            - paragraph [ref=e403]: Rema
+          - button "Lonely at the Top play_arrow Full Lonely at the Top Asake" [ref=e404] [cursor=pointer]:
+            - generic [ref=e405]:
+              - img "Lonely at the Top" [ref=e406]
+              - generic [ref=e408]: play_arrow
+              - generic [ref=e410]: Full
+            - paragraph [ref=e411]: Lonely at the Top
+            - paragraph [ref=e412]: Asake
+          - button "Arabic Kuthu play_arrow Full Arabic Kuthu Anirudh Ravichander" [ref=e413] [cursor=pointer]:
+            - generic [ref=e414]:
+              - img "Arabic Kuthu" [ref=e415]
+              - generic [ref=e417]: play_arrow
+              - generic [ref=e419]: Full
+            - paragraph [ref=e420]: Arabic Kuthu
+            - paragraph [ref=e421]: Anirudh Ravichander
+          - button "Bloody Sweet play_arrow Full Bloody Sweet Anirudh Ravichander" [ref=e422] [cursor=pointer]:
+            - generic [ref=e423]:
+              - img "Bloody Sweet" [ref=e424]
+              - generic [ref=e426]: play_arrow
+              - generic [ref=e428]: Full
+            - paragraph [ref=e429]: Bloody Sweet
+            - paragraph [ref=e430]: Anirudh Ravichander
+          - button "Fall play_arrow Full Fall Davido" [ref=e431] [cursor=pointer]:
+            - generic [ref=e432]:
+              - img "Fall" [ref=e433]
+              - generic [ref=e435]: play_arrow
+              - generic [ref=e437]: Full
+            - paragraph [ref=e438]: Fall
+            - paragraph [ref=e439]: Davido
+          - button "Terminator play_arrow Full Terminator Asake" [ref=e440] [cursor=pointer]:
+            - generic [ref=e441]:
+              - img "Terminator" [ref=e442]
+              - generic [ref=e444]: play_arrow
+              - generic [ref=e446]: Full
+            - paragraph [ref=e447]: Terminator
+            - paragraph [ref=e448]: Asake
+          - button "Obsessed With You play_arrow Full Obsessed With You Central Cee" [ref=e449] [cursor=pointer]:
+            - generic [ref=e450]:
+              - img "Obsessed With You" [ref=e451]
+              - generic [ref=e453]: play_arrow
+              - generic [ref=e455]: Full
+            - paragraph [ref=e456]: Obsessed With You
+            - paragraph [ref=e457]: Central Cee
+          - button "Lokiverse 2.0 play_arrow Full Lokiverse 2.0 Anirudh Ravichander" [ref=e458] [cursor=pointer]:
+            - generic [ref=e459]:
+              - img "Lokiverse 2.0" [ref=e460]
+              - generic [ref=e462]: play_arrow
+              - generic [ref=e464]: Full
+            - paragraph [ref=e465]: Lokiverse 2.0
+            - paragraph [ref=e466]: Anirudh Ravichander
+  - navigation [ref=e468]:
+    - button "Home" [ref=e469] [cursor=pointer]:
+      - generic [ref=e470]: home
+    - button "Search" [ref=e471] [cursor=pointer]:
+      - generic [ref=e472]: search
+    - button "Charts" [ref=e473] [cursor=pointer]:
+      - generic [ref=e474]: leaderboard
+    - button "Upload" [ref=e475] [cursor=pointer]:
+      - generic [ref=e476]: cloud_upload
+    - button "Admin" [ref=e477] [cursor=pointer]:
+      - generic [ref=e478]: admin_panel_settings
+    - button "Library" [ref=e479] [cursor=pointer]:
+      - generic [ref=e480]: repeat
+    - button "Profile" [ref=e481] [cursor=pointer]:
+      - generic [ref=e482]: person

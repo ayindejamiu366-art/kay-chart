@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Android build outputs (not source)
+android/app/build/
+android/app/*.apk
+android/app/*.aab
+android/*.iml
+.android/
+
+# Environment / secrets (never commit)
+.env
+.env.firebase
+.env.local
+*.env
+serviceAccountKey.json
+
+# Logs
+*.log
+*.map
+
+# Database
+server/nocturne.db
+server/nocturne.db-shm
+server/nocturne.db-wal
+
+# Uploaded media (runtime-generated)
+server/uploads/audio/*
+server/uploads/covers/*
+!server/uploads/audio/.gitkeep
+!server/uploads/covers/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

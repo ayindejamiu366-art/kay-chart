@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ed8566"/>
+      <stop offset="100%" style="stop-color:#6b1800"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="38%" r="60%">
+      <stop offset="0%" style="stop-color:#f2a38c;stop-opacity:0.85"/>
+      <stop offset="100%" style="stop-color:#6b1800;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="300" height="300" fill="url(#bg)"/>
+  <circle cx="150" cy="150" r="300" fill="url(#glow)"/>
+  <circle cx="150" cy="150" r="146" fill="none" stroke="rgba(255,255,255,0.16)" stroke-width="2"/>
+  <circle cx="150" cy="150" r="138" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <circle cx="110" cy="60" r="14" fill="rgba(255,255,255,0.14)"/>
+  <circle cx="202" cy="92" r="7" fill="rgba(255,255,255,0.10)"/>
+  <circle cx="60" cy="180" r="9" fill="rgba(255,255,255,0.12)"/>
+  
+  
+  <path d="M96 300 C92.4 238 90.6 216 114 200 C104 192 112 178 150 178 C188 178 196 192 186 200 C209.4 216 207.6 238 204 300 Z" fill="#e6582e"/>
+  <ellipse cx="150" cy="150" rx="60" ry="64" fill="#e6582e"/>
+  <ellipse cx="150" cy="150" rx="52" ry="58" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="2"/>
+  <circle cx="122" cy="150" r="6" fill="rgba(30,30,30,0.55)"/>
+  <circle cx="178" cy="150" r="6" fill="rgba(30,30,30,0.55)"/>
+  <circle cx="120" cy="152" r="9" fill="rgba(255,255,255,0.22)"/>
+  <circle cx="180" cy="152" r="9" fill="rgba(255,255,255,0.22)"/>
+  <path d="M140 186 q10 7 20 0" stroke="rgba(30,30,30,0.5)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="150" y="242" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="bold" fill="rgba(255,255,255,0.92)" text-anchor="middle">TW</text>
+</svg>
