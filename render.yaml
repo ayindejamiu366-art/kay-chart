@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: kay-chart-api
+    env: node
+    buildCommand: npm ci
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CORS_ORIGINS
+        value: http://localhost:5173,http://localhost:3001,https://localhost,capacitor://localhost,http://localhost,https://kay-chart.onrender.com
+      - key: ADMIN_EMAIL
+        value: admin@nocturne.com
+      - key: ADMIN_PASSWORD
+        generateValue: true
+      - key: TRENDING_SYNC_INTERVAL
+        value: 30

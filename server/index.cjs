@@ -20,7 +20,7 @@ process.on('unhandledRejection', (reason) => {
   console.error('[Fatal] Unhandled rejection:', reason?.message || reason);
 });
 
-const allowedOrigins = (process.env.CORS_ORIGINS || 'http://localhost:5173,http://localhost:3001,capacitor://localhost,http://localhost')
+const allowedOrigins = (process.env.CORS_ORIGINS || 'http://localhost:5173,http://localhost:3001,https://localhost,capacitor://localhost,http://localhost')
   .split(',').map(v => v.trim()).filter(Boolean);
 app.use(cors({
   origin(origin, callback) {
