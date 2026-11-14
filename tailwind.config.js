@@ -4,6 +4,13 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      // `100vh` is the viewport with the browser/WebView chrome retracted, so
+      // it is taller than what is visible on phones and clips the bottom of
+      // full-height screens. `100dvh` tracks the real visible height; the
+      // `100vh` entry is the fallback for engines without dvh support.
+      height: { screen: ['100vh', '100dvh'] },
+      minHeight: { screen: ['100vh', '100dvh'] },
+      maxHeight: { screen: ['100vh', '100dvh'] },
       colors: {
         "primary": "rgb(var(--color-primary) / <alpha-value>)",
         "primary-hover": "rgb(var(--color-primary-hover) / <alpha-value>)",

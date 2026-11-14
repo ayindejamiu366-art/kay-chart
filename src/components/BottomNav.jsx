@@ -59,7 +59,7 @@ export default function BottomNav() {
   }, { dependencies: [activeItem?.label] });
 
   return (
-    <nav className="lg:hidden fixed bottom-3 left-3 right-3 h-[68px] flex justify-around items-center px-2 bg-surface-nav/90 backdrop-blur-xl border border-border-subtle z-50 rounded-full shadow-[0_8px_40px_rgba(0,0,0,0.6)]">
+    <nav className="lg:hidden fixed bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-3 right-3 h-[68px] flex justify-around items-center px-2 bg-surface-nav/90 backdrop-blur-xl border border-border-subtle z-50 rounded-full shadow-[0_8px_40px_rgba(0,0,0,0.6)]">
       {ready && (
         <div
           ref={indicatorRef}

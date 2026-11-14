@@ -129,7 +129,7 @@ function AuthenticatedLayout({ children }) {
   const isHome = pathname === '/home';
   if (!isOnline) {
     return (
-    <div className="min-h-screen pb-[160px]">
+    <div className="min-h-screen pb-[calc(160px+env(safe-area-inset-bottom))]">
         <YouAreOffline />
       </div>
     );
@@ -137,7 +137,7 @@ function AuthenticatedLayout({ children }) {
   return (
     <div className={isHome ? 'h-screen overflow-hidden' : 'flex min-h-screen'}>
       {!isHome && <AppSidebar />}
-      <div className={isHome ? 'contents' : 'flex-1 min-w-0 pb-[168px] lg:pb-24'}>
+      <div className={isHome ? 'contents' : 'flex-1 min-w-0 pb-[calc(168px+env(safe-area-inset-bottom))] lg:pb-24'}>
         <PageTransition>{children}</PageTransition>
       </div>
       {/* Video only renders while the user is actually watching. The transport

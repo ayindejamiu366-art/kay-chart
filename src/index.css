@@ -530,7 +530,6 @@ input[type=range]::-webkit-slider-runnable-track {
 /* iPhone notch / dynamic island safe areas */
 @supports (padding: env(safe-area-inset-top)) {
   .auth-screen {
-    padding-top: env(safe-area-inset-top);
     padding-bottom: env(safe-area-inset-bottom);
   }
 }

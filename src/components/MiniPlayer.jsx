@@ -116,7 +116,7 @@ export default function MiniPlayer() {
   }, [art, hasArt]);
 
   return (
-    <div ref={containerRef} data-tour="player" className="fixed bottom-[88px] left-3 right-3 z-40 lg:bottom-4 lg:left-[244px]" style={{ opacity: 0 }}>
+    <div ref={containerRef} data-tour="player" className="fixed bottom-[calc(88px+env(safe-area-inset-bottom))] left-3 right-3 z-40 lg:bottom-4 lg:left-[244px]" style={{ opacity: 0 }}>
       <div
         className="glass-panel rounded-2xl flex items-center gap-3 p-2 cursor-pointer shadow-[0_-4px_30px_rgba(0,0,0,0.6)] border-glow press-feedback"
         onClick={() => navigate('/now-playing')}
