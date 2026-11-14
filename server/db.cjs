@@ -6,7 +6,9 @@ const dotenv = require('dotenv');
 
 dotenv.config({ path: path.join(__dirname, '..', '.env') });
 
-const db = new Database(path.join(__dirname, 'nocturne.db'));
+const { DB_PATH } = require('./paths.cjs');
+
+const db = new Database(DB_PATH);
 
 db.pragma('journal_mode = WAL');
 db.pragma('foreign_keys = ON');

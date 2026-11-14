@@ -5,7 +5,7 @@ const Database = require('better-sqlite3');
 
 const SECRET = process.env.JWT_SECRET;
 const BASE = 'http://localhost:3001/api';
-const db = new Database(path.join(__dirname, '..', 'server', 'nocturne.db'), { readonly: false });
+const db = new Database(require('../server/paths.cjs').DB_PATH, { readonly: false });
 
 const sign = (id, email, name) => jwt.sign({ id, email, name }, SECRET, { expiresIn: '30d' });
 const call = async (path, token, body) => {

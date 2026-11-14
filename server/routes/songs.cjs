@@ -12,10 +12,7 @@ const { inspectImage } = require('../utils/image-inspect.cjs');
 
 const router = express.Router();
 
-const AUDIO_DIR = path.join(__dirname, '..', 'uploads', 'audio');
-const COVER_DIR = path.join(__dirname, '..', 'uploads', 'covers');
-fs.mkdirSync(AUDIO_DIR, { recursive: true });
-fs.mkdirSync(COVER_DIR, { recursive: true });
+const { AUDIO_DIR, COVER_DIR } = require('../paths.cjs');
 
 const COVER_MAX_BYTES = 2 * 1024 * 1024;
 

@@ -9,6 +9,7 @@ const cors = require('cors');
 
 const helmet = require('helmet');
 const { generalLimiter } = require('./middleware/rateLimit.cjs');
+const { UPLOADS_DIR } = require('./paths.cjs');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -39,7 +40,7 @@ app.use(helmet({
 app.use(helmet.referrerPolicy({ policy: 'strict-origin-when-cross-origin' }));
 app.use(generalLimiter);
 
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/uploads', express.static(UPLOADS_DIR));
 
 // --- Initialize Database (auto) ---
 let dbReady = false;

@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const router = express.Router();
 const db = require('../db.cjs');
+const { AUDIO_DIR } = require('../paths.cjs');
 const { authMiddleware } = require('../middleware/auth.cjs');
 const { streamLimiter } = require('../middleware/rateLimit.cjs');
 
@@ -52,10 +53,8 @@ async function resolveSource(id) {
 
   const song = db.prepare('SELECT id, title, audio_url, status FROM songs WHERE id = ?').get(id) || null;
   if (song && song.audio_url && song.audio_url.startsWith('/uploads/audio/')) {
-    const filePath = path.join(__dirname, '..', song.audio_url);
-    const resolved = path.resolve(filePath);
-    const uploadsDir = path.resolve(__dirname, '..', 'uploads', 'audio');
-    if (!resolved.startsWith(uploadsDir)) return null;
+    const resolved = path.resolve(AUDIO_DIR, path.basename(song.audio_url));
+    if (!resolved.startsWith(path.resolve(AUDIO_DIR) + path.sep)) return null;
     if (fs.existsSync(resolved)) {
       const ext = path.extname(resolved).toLowerCase();
       const MIME_TYPES = {

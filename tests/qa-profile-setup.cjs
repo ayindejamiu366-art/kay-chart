@@ -40,7 +40,7 @@ const req = async (method, path, { body, token, raw } = {}) => {
   require('dotenv').config({ path: '.env' });
   const jwt = require('jsonwebtoken');
   const Database = require('better-sqlite3');
-  const db = new Database('server/nocturne.db');
+  const db = new Database(require('../server/paths.cjs').DB_PATH);
   const id = 'usr_qa' + Date.now().toString().slice(-6);
   const bcrypt = require('bcryptjs');
   db.prepare('INSERT INTO users (id, name, email, password_hash, role) VALUES (?,?,?,?,?)')

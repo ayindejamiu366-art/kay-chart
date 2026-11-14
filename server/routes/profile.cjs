@@ -18,8 +18,7 @@ const {
 
 const router = express.Router();
 
-const AVATAR_DIR = path.join(__dirname, '..', 'uploads', 'avatars');
-fs.mkdirSync(AVATAR_DIR, { recursive: true });
+const { AVATAR_DIR } = require('../paths.cjs');
 
 const AVATAR_MAX_BYTES = 5 * 1024 * 1024;
 const AVATAR_MIN_DIMENSION = 64;

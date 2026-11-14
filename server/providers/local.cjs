@@ -8,7 +8,7 @@ const db = require('../db.cjs');
 const fs = require('fs');
 const path = require('path');
 
-const UPLOADS_AUDIO_DIR = path.join(__dirname, '..', '..', 'uploads', 'audio');
+const { AUDIO_DIR: UPLOADS_AUDIO_DIR } = require('../paths.cjs');
 
 class LocalProvider {
   constructor(config = {}) {
