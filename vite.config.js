@@ -92,6 +92,13 @@ export default defineConfig({
   server: {
     host: true,
     port: 5173,
+    // The native project (android/) holds generated Gradle output and the
+    // capacitor-cordova-android-plugins folder. Vite's file watcher has no reason
+    // to scan it, and on Windows scanning it crashes the dev server with
+    // "UNKNOWN: unknown error, scandir ...capacitor-cordova-android-plugins".
+    watch: {
+      ignored: ['**/android/**', '**/dist/**', '**/server/uploads/**', '**/test-results/**'],
+    },
     proxy: {
       '/api': {
         target: 'http://localhost:3001',
