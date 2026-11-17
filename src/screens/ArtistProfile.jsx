@@ -185,7 +185,7 @@ export default function ArtistProfile() {
           <span className="material-symbols-outlined text-on-surface">arrow_back</span>
         </button>
         <div ref={infoRef} className="absolute bottom-6 left-6 right-6 z-10">
-          <h1 className="font-display-lg text-display-lg text-on-surface leading-tight">{artist.name}</h1>
+          <h1 className="font-display-lg text-display-lg text-on-surface leading-tight truncate min-w-0 sm:text-display-xl md:text-display-2xl">{artist.name}</h1>
           <p className="font-body-sm text-body-sm text-on-surface-variant mt-1">
             {formatListeners(artist.nbFans || artist.listeners)} followers
           </p>

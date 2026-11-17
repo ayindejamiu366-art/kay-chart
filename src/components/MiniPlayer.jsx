@@ -145,7 +145,7 @@ export default function MiniPlayer() {
               {/* The artist line is often the last thing known about a resolved
                   track, so it is skeletonised only while genuinely absent. */}
               {currentTrack.artistName ? (
-                <p className="text-[10px] text-on-surface-variant truncate">{currentTrack.artistName}</p>
+                <p className="text-[10px] text-on-surface-variant truncate min-w-0">{currentTrack.artistName}</p>
               ) : (
                 <Skeleton width={78} height={10} className="max-w-[45%]" animation="pulse" />
               )}

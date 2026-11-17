@@ -182,7 +182,7 @@ const onSeek = (seconds) => { if (isYouTube) seekYouTube(seconds); else seek(sec
         <div className="w-full max-w-[400px] flex flex-col gap-6">
           <div ref={infoRef} className="flex justify-between items-end w-full">
             <div className="flex flex-col gap-1 min-w-0 flex-grow">
-              <h2 className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface truncate">{currentTrack.title}</h2>
+              <h2 className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface truncate min-w-0 sm:text-headline-xl md:text-headline-2xl">{currentTrack.title}</h2>
               <div className="flex items-center gap-2">
                 <p className="font-body-lg text-body-lg text-on-surface-variant truncate">{currentTrack.artistName}</p>
                 {isYouTube && (
