@@ -83,7 +83,7 @@ export default function AlbumDetail() {
           <img src={album.cover} alt={album.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
         </div>
         <div ref={infoRef}>
-          <h1 className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface text-center mb-1">{album.title}</h1>
+          <h1 className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface text-center mb-1 truncate min-w-0 sm:text-headline-xl md:text-headline-2xl">{album.title}</h1>
           <p className="font-body-lg text-body-lg text-primary mb-2 cursor-pointer hover:underline" onClick={() => navigate(`/artist/${album.artistId}`)}>{album.artistName}</p>
           <p className="font-body-sm text-body-sm text-on-surface-variant text-center">{album.year} · {album.totalSongs} Songs · {album.totalDuration}</p>
         </div>
